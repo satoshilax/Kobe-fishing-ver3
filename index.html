@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>神戸釣り情報</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+            background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+            min-height: 100vh;
+            padding: 16px;
+            padding-bottom: 40px;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: #0891b2;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .header .subtitle {
+            color: #64748b;
+            font-size: 14px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            color: #0891b2;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .ai-section {
+            background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+            color: white;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+        }
+        
+        .ai-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .rec-section {
+            margin-bottom: 24px;
+        }
+        
+        .rec-section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+        }
+        
+        .rec-spot {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .rec-spot-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .rec-reason {
+            font-size: 14px;
+            opacity: 0.95;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        .rec-details {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .rec-gear {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .confidence {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.3);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        
+        .tide-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 12px;
+        }
+        
+        .tide-item {
+            background: #f0f9ff;
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .tide-label {
+            color: #64748b;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        
+        .tide-time {
+            color: #0891b2;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .mazume-section {
+            background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(251, 146, 60, 0.3);
+        }
+        
+        .mazume-times {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 12px;
+        }
+        
+        .mazume-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .mazume-label {
+            font-size: 13px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+        
+        .mazume-time {
+            font-size: 22px;
+            font-weight: 700;
+        }
+        
+        .spot-card {
+            background: #f8fafc;
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            border-left: 4px solid #0891b2;
+        }
+        
+        .spot-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 8px;
+        }
+        
+        .spot-name {
+            color: #0f172a;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .spot-distance {
+            color: #64748b;
+            font-size: 13px;
+            background: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+        
+        .spot-area {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+        }
+        
+        .spot-info {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .latest-catch {
+            background: #f0fdf4;
+            border-left: 3px solid #22c55e;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+        
+        .catch-fish {
+            color: #15803d;
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+        
+        .catch-user {
+            color: #16a34a;
+            font-size: 13px;
+        }
+        
+        .area-section {
+            margin-bottom: 24px;
+        }
+        
+        .area-title {
+            color: #0891b2;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            padding-left: 12px;
+            border-left: 4px solid #0891b2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎣 神戸釣り情報</h1>
+        <div class="subtitle">2026年2月7日（土）</div>
+        <div class="subtitle">AI予測・潮汐・まずめ・釣果情報</div>
+    </div>
+
+    <!-- AI推奨スポット -->
+    <div class="ai-section">
+        <div class="ai-title">🤖 AI釣果予測</div>
+        
+        <div class="rec-section">
+            <div class="rec-section-title">📅 明日（2月8日 日曜）のおすすめ</div>
+            
+            <div class="rec-spot">
+                <div class="rec-spot-name">🏆 六甲アイランド</div>
+                <div class="rec-reason">過去3日間でタチウオの釣果が連続。明日は朝潮が動く時間帯と夕まずめが重なるため高確率。</div>
+                <div class="rec-details">
+                    <strong>狙い目時間：</strong>17:00-19:00<br>
+                    <strong>予想釣果：</strong>タチウオ 2-4匹<br>
+                    <strong>予想サイズ：</strong>80-95cm
+                </div>
+                <div class="rec-gear">
+                    <strong>準備する仕掛け：</strong><br>
+                    • ワインド用ジグヘッド（14-21g）<br>
+                    • ワインド用ワーム（ピンク、グロー）<br>
+                    • ケミホタル<br>
+                    • タチウオ用リーダー（ワイヤー推奨）
+                </div>
+                <div class="confidence">信頼度: 85%</div>
+            </div>
+            
+            <div class="rec-spot">
+                <div class="rec-spot-name">🥈 明石港</div>
+                <div class="rec-reason">明石のタコシーズン継続中。潮が適度に動く時間帯が狙い目。</div>
+                <div class="rec-details">
+                    <strong>狙い目時間：</strong>09:00-12:00<br>
+                    <strong>予想釣果：</strong>タコ 1-3匹<br>
+                    <strong>予想サイズ：</strong>400-600g
+                </div>
+                <div class="rec-gear">
+                    <strong>準備する仕掛け：</strong><br>
+                    • タコテンヤ（30-50号）<br>
+                    • タコエギ<br>
+                    • 豚の脂身またはキビナゴ
+                </div>
+                <div class="confidence">信頼度: 78%</div>
+            </div>
+        </div>
+        
+        <div class="rec-section">
+            <div class="rec-section-title">📅 今週末（2月8-9日）のおすすめ</div>
+            
+            <div class="rec-spot">
+                <div class="rec-spot-name">🏆 アジュール舞子</div>
+                <div class="rec-reason">週末は家族連れにおすすめ。サビキ釣りでアジが好調。初心者でも楽しめる。</div>
+                <div class="rec-details">
+                    <strong>狙い目時間：</strong>10:00-15:00<br>
+                    <strong>予想釣果：</strong>アジ 20-40匹<br>
+                    <strong>予想サイズ：</strong>12-18cm
+                </div>
+                <div class="rec-gear">
+                    <strong>準備する仕掛け：</strong><br>
+                    • サビキ仕掛け（5-7号針）<br>
+                    • アミコマセ<br>
+                    • コマセカゴ<br>
+                    • クーラーボックス
+                </div>
+                <div class="confidence">信頼度: 90%</div>
+            </div>
+            
+            <div class="rec-spot">
+                <div class="rec-spot-name">🥈 神戸空港ベランダ</div>
+                <div class="rec-reason">朝まずめに青物の回遊が期待できる。サワラ、ハマチの可能性大。</div>
+                <div class="rec-details">
+                    <strong>狙い目時間：</strong>06:00-08:00<br>
+                    <strong>予想釣果：</strong>サワラ/ハマチ 1-3匹<br>
+                    <strong>予想サイズ：</strong>40-60cm
+                </div>
+                <div class="rec-gear">
+                    <strong>準備する仕掛け：</strong><br>
+                    • メタルジグ（40-60g）<br>
+                    • ジグミノー（90-120mm）<br>
+                    • ショックリーダー（30-40lb）<br>
+                    • タモ網
+                </div>
+                <div class="confidence">信頼度: 75%</div>
+            </div>
+            
+            <div class="rec-spot">
+                <div class="rec-spot-name">🥉 芦屋浜</div>
+                <div class="rec-reason">投げ釣りでキス、カレイが狙える。のんびり釣りたい方におすすめ。</div>
+                <div class="rec-details">
+                    <strong>狙い目時間：</strong>08:00-14:00<br>
+                    <strong>予想釣果：</strong>キス 8-15匹<br>
+                    <strong>予想サイズ：</strong>18-25cm
+                </div>
+                <div class="rec-gear">
+                    <strong>準備する仕掛け：</strong><br>
+                    • 投げ釣り仕掛け（2-3本針）<br>
+                    • 天秤（15-20号）<br>
+                    • 青イソメ<br>
+                    • 投げ竿とリール
+                </div>
+                <div class="confidence">信頼度: 82%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 潮汐情報 -->
+    <div class="section">
+        <div class="section-title">🌊 今日の潮汐（2月7日 神戸）</div>
+        <div class="tide-info">
+            <div class="tide-item">
+                <div class="tide-label">満潮</div>
+                <div class="tide-time">05:23</div>
+            </div>
+            <div class="tide-item">
+                <div class="tide-label">干潮</div>
+                <div class="tide-time">11:47</div>
+            </div>
+            <div class="tide-item">
+                <div class="tide-label">満潮</div>
+                <div class="tide-time">17:35</div>
+            </div>
+            <div class="tide-item">
+                <div class="tide-label">干潮</div>
+                <div class="tide-time">23:52</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- まずめ時 -->
+    <div class="mazume-section">
+        <div class="section-title" style="color: white;">☀️ 今日のまずめ時（2月7日）</div>
+        <div class="mazume-times">
+            <div class="mazume-item">
+                <div class="mazume-label">朝まずめ</div>
+                <div class="mazume-time">06:15-07:00</div>
+            </div>
+            <div class="mazume-item">
+                <div class="mazume-label">夕まずめ</div>
+                <div class="mazume-time">17:10-17:55</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 釣りスポット一覧 -->
+    <div class="section">
+        <div class="section-title">📍 釣りスポット一覧</div>
+        
+        <!-- 神戸エリア -->
+        <div class="area-section">
+            <div class="area-title">神戸エリア</div>
+            
+            <div class="spot-card">
+                <div class="spot-area">神戸</div>
+                <div class="spot-header">
+                    <div class="spot-name">須磨海釣り公園</div>
+                    <div class="spot-distance">2.3km</div>
+                </div>
+                <div class="spot-info">ファミリー向け・足場良好・設備充実</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 メバル 25cm</div>
+                    <div class="catch-user">釣り太郎さん（2時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">神戸</div>
+                <div class="spot-header">
+                    <div class="spot-name">神戸空港ベランダ</div>
+                    <div class="spot-distance">4.1km</div>
+                </div>
+                <div class="spot-info">青物狙い・広い・駐車場あり</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 サワラ 55cm</div>
+                    <div class="catch-user">海の男さん（5時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">神戸</div>
+                <div class="spot-header">
+                    <div class="spot-name">アジュール舞子</div>
+                    <div class="spot-distance">6.8km</div>
+                </div>
+                <div class="spot-info">サビキ釣り・初心者向け</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 アジ 15cm × 23匹</div>
+                    <div class="catch-user">ファミリー太郎さん（1時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">神戸</div>
+                <div class="spot-header">
+                    <div class="spot-name">六甲アイランド</div>
+                    <div class="spot-distance">3.5km</div>
+                </div>
+                <div class="spot-info">タチウオ・青物・夜釣り人気</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 タチウオ 85cm</div>
+                    <div class="catch-user">夜釣り名人さん（3時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">神戸</div>
+                <div class="spot-header">
+                    <div class="spot-name">ポートアイランド北公園</div>
+                    <div class="spot-distance">2.8km</div>
+                </div>
+                <div class="spot-info">アジ・サバ・アクセス良好</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 サバ 28cm × 15匹</div>
+                    <div class="catch-user">サバ師匠さん（6時間前）</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 明石エリア -->
+        <div class="area-section">
+            <div class="area-title">明石エリア</div>
+            
+            <div class="spot-card">
+                <div class="spot-area">明石</div>
+                <div class="spot-header">
+                    <div class="spot-name">明石港</div>
+                    <div class="spot-distance">18.5km</div>
+                </div>
+                <div class="spot-info">タコ・メバル・有名スポット</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 タコ 450g × 2匹</div>
+                    <div class="catch-user">タコ名人さん（4時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">明石</div>
+                <div class="spot-header">
+                    <div class="spot-name">明石海峡大橋下</div>
+                    <div class="spot-distance">15.2km</div>
+                </div>
+                <div class="spot-info">潮通し良好・大物狙い</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 ハマチ 48cm</div>
+                    <div class="catch-user">青物ハンターさん（7時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">明石</div>
+                <div class="spot-header">
+                    <div class="spot-name">林崎漁港</div>
+                    <div class="spot-distance">17.8km</div>
+                </div>
+                <div class="spot-info">アジ・イワシ・無料駐車場</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 アジ 18cm × 32匹</div>
+                    <div class="catch-user">サビキマスターさん（2時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">明石</div>
+                <div class="spot-header">
+                    <div class="spot-name">江井ヶ島海岸</div>
+                    <div class="spot-distance">22.4km</div>
+                </div>
+                <div class="spot-info">キス・カレイ・投げ釣り</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 キス 24cm × 12匹</div>
+                    <div class="catch-user">投げ釣り名人さん（5時間前）</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 尼崎エリア -->
+        <div class="area-section">
+            <div class="area-title">尼崎エリア</div>
+            
+            <div class="spot-card">
+                <div class="spot-area">尼崎</div>
+                <div class="spot-header">
+                    <div class="spot-name">芦屋浜</div>
+                    <div class="spot-distance">5.2km</div>
+                </div>
+                <div class="spot-info">キス・カレイ・投げ釣り</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 キス 22cm × 8匹</div>
+                    <div class="catch-user">投げ釣り師さん（4時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">尼崎</div>
+                <div class="spot-header">
+                    <div class="spot-name">芦屋南浜</div>
+                    <div class="spot-distance">5.8km</div>
+                </div>
+                <div class="spot-info">シーバス・チヌ・ルアー人気</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 シーバス 58cm × 2匹</div>
+                    <div class="catch-user">ルアーマンさん（2時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">尼崎</div>
+                <div class="spot-header">
+                    <div class="spot-name">尼崎フェニックス</div>
+                    <div class="spot-distance">8.9km</div>
+                </div>
+                <div class="spot-info">ハゼ・セイゴ・車横付け可</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 ハゼ 18cm × 42匹</div>
+                    <div class="catch-user">ハゼ職人さん（3時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">尼崎</div>
+                <div class="spot-header">
+                    <div class="spot-name">甲子園浜</div>
+                    <div class="spot-distance">7.1km</div>
+                </div>
+                <div class="spot-info">キス・カレイ・広い砂浜</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 カレイ 32cm × 5匹</div>
+                    <div class="catch-user">カレイ名人さん（6時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">尼崎</div>
+                <div class="spot-header">
+                    <div class="spot-name">武庫川一文字</div>
+                    <div class="spot-distance">6.5km</div>
+                </div>
+                <div class="spot-info">チヌ・青物・渡船必要</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 チヌ 42cm × 3匹</div>
+                    <div class="catch-user">チヌ師さん（8時間前）</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 淡路島エリア -->
+        <div class="area-section">
+            <div class="area-title">淡路島エリア</div>
+            
+            <div class="spot-card">
+                <div class="spot-area">淡路島</div>
+                <div class="spot-header">
+                    <div class="spot-name">岩屋港</div>
+                    <div class="spot-distance">24.3km</div>
+                </div>
+                <div class="spot-info">タチウオ・アジ・近い</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 タチウオ 98cm × 2匹</div>
+                    <div class="catch-user">太刀使いさん（5時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">淡路島</div>
+                <div class="spot-header">
+                    <div class="spot-name">江井港</div>
+                    <div class="spot-distance">28.7km</div>
+                </div>
+                <div class="spot-info">青物・根魚・人気スポット</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 ガシラ 23cm × 12匹</div>
+                    <div class="catch-user">根魚マニアさん（4時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">淡路島</div>
+                <div class="spot-header">
+                    <div class="spot-name">浦港</div>
+                    <div class="spot-distance">32.1km</div>
+                </div>
+                <div class="spot-info">アオリイカ・タチウオ</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 アオリイカ 1.2kg × 4匹</div>
+                    <div class="catch-user">イカ釣り名人さん（7時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">淡路島</div>
+                <div class="spot-header">
+                    <div class="spot-name">平磯海づり公園</div>
+                    <div class="spot-distance">35.6km</div>
+                </div>
+                <div class="spot-info">設備充実・ファミリー向け</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 アジ 20cm × 28匹</div>
+                    <div class="catch-user">ファミリー釣師さん（3時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">淡路島</div>
+                <div class="spot-header">
+                    <div class="spot-name">仮屋漁港</div>
+                    <div class="spot-distance">26.9km</div>
+                </div>
+                <div class="spot-info">メバル・ガシラ・アジ</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 メバル 28cm × 6匹</div>
+                    <div class="catch-user">メバリストさん（5時間前）</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 赤穂エリア -->
+        <div class="area-section">
+            <div class="area-title">赤穂エリア</div>
+            
+            <div class="spot-card">
+                <div class="spot-area">赤穂</div>
+                <div class="spot-header">
+                    <div class="spot-name">赤穂海浜公園</div>
+                    <div class="spot-distance">78.2km</div>
+                </div>
+                <div class="spot-info">キス・カレイ・広い</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 カレイ 35cm × 7匹</div>
+                    <div class="catch-user">カレイハンターさん（6時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">赤穂</div>
+                <div class="spot-header">
+                    <div class="spot-name">赤穂港</div>
+                    <div class="spot-distance">76.5km</div>
+                </div>
+                <div class="spot-info">メバル・カサゴ・チヌ</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 メバル 26cm × 9匹</div>
+                    <div class="catch-user">メバル専門さん（4時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">赤穂</div>
+                <div class="spot-header">
+                    <div class="spot-name">坂越港</div>
+                    <div class="spot-distance">82.3km</div>
+                </div>
+                <div class="spot-info">アジ・サバ・静か</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 サバ 32cm × 18匹</div>
+                    <div class="catch-user">サバマニアさん（5時間前）</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 姫路エリア -->
+        <div class="area-section">
+            <div class="area-title">姫路エリア</div>
+            
+            <div class="spot-card">
+                <div class="spot-area">姫路</div>
+                <div class="spot-header">
+                    <div class="spot-name">姫路港</div>
+                    <div class="spot-distance">52.4km</div>
+                </div>
+                <div class="spot-info">ハゼ・キス・セイゴ</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 セイゴ 38cm × 4匹</div>
+                    <div class="catch-user">シーバス狙いさん（7時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">姫路</div>
+                <div class="spot-header">
+                    <div class="spot-name">家島諸島</div>
+                    <div class="spot-distance">65.8km</div>
+                </div>
+                <div class="spot-info">青物・マダイ・渡船</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 マダイ 52cm × 2匹</div>
+                    <div class="catch-user">タイ釣り名人さん（9時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">姫路</div>
+                <div class="spot-header">
+                    <div class="spot-name">的形海水浴場</div>
+                    <div class="spot-distance">58.9km</div>
+                </div>
+                <div class="spot-info">キス・カレイ・夏は海水浴</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 キス 26cm × 15匹</div>
+                    <div class="catch-user">キス職人さん（5時間前）</div>
+                </div>
+            </div>
+            
+            <div class="spot-card">
+                <div class="spot-area">姫路</div>
+                <div class="spot-header">
+                    <div class="spot-name">網干港</div>
+                    <div class="spot-distance">48.7km</div>
+                </div>
+                <div class="spot-info">ハゼ・チヌ・アクセス良好</div>
+                <div class="latest-catch">
+                    <div class="catch-fish">🐟 チヌ 45cm × 2匹</div>
+                    <div class="catch-user">チヌマスターさん（8時間前）</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; color: white; padding: 20px; font-size: 14px; opacity: 0.9;">
+        <p>🎣 良い釣果を！</p>
+        <p style="margin-top: 8px; font-size: 12px;">神戸釣り情報 v1.0</p>
+    </div>
+</body>
+</html>
