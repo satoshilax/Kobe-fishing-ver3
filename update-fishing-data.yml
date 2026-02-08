@@ -1,0 +1,46 @@
+name: 釣果データ自動更新
+
+on:
+  schedule:
+    # 毎日 朝6時、昼12時、夕方6時（日本時間）に実行
+    # GitHub Actionsは UTC時間なので -9時間
+    - cron: '0 21 * * *'  # 朝6時 JST
+    - cron: '0 3 * * *'   # 昼12時 JST
+    - cron: '0 9 * * *'   # 夕方6時 JST
+  
+  # 手動実行も可能
+  workflow_dispatch:
+
+jobs:
+  update-fishing-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: チェックアウト
+        uses: actions/checkout@v3
+      
+      - name: Python セットアップ
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: 依存パッケージインストール
+        run: |
+          pip install requests beautifulsoup4 lxml
+      
+      - name: 釣果データ収集実行
+        run: |
+          python collect_fishing_data.py
+      
+      - name: 変更をコミット
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add fishing-data.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "🎣 釣果データ自動更新 $(date +'%Y-%m-%d %H:%M')"
+      
+      - name: 変更をプッシュ
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
