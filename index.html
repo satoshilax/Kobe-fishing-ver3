@@ -266,6 +266,31 @@
             font-size: 12px;
         }
         
+        .hidden-catch {
+            display: none;
+        }
+        
+        .show-more-btn {
+            width: 100%;
+            margin-top: 12px;
+            padding: 10px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        
+        .show-more-btn:hover {
+            opacity: 0.9;
+        }
+        
+        .show-more-btn:active {
+            opacity: 0.8;
+        }
+        
         .loading {
             text-align: center;
             padding: 40px;
@@ -354,7 +379,7 @@
             document.documentElement.setAttribute('data-theme', 'dark');
         }
         
-        // スマートAI予測（過去データ + 天気 + 潮汐考慮）
+        // スマートAI予測（過去データ + 天気 + 潮汐考慮）- 複数予測版
         function generateSmartPrediction(data) {
             const tomorrow = data.weatherForecast[1]; // 明日の天気
             const tide = data.moonPhase.tide;
@@ -397,41 +422,49 @@
             if (tide === '小潮') tideBonus = 0.9;
             if (tide === '長潮') tideBonus = 0.8;
             
-            // 各スポットをスコアリング
-            let bestPrediction = null;
-            let maxScore = 0;
+            // 全スポットをスコアリング
+            let allPredictions = [];
             
             data.spots.forEach(spot => {
                 if (!spot.catches || spot.catches.length === 0) return;
                 
-                // 最近の釣果を分析
-                const recentCatch = spot.catches[0];
-                let score = recentCatch.count * weatherBonus * tideBonus;
-                
-                // 過去データがあれば活用
-                if (historical[spot.name]) {
-                    const hist = historical[spot.name];
-                    const period = Object.keys(hist)[0];
-                    const fishData = hist[period][recentCatch.fish];
-                    
-                    if (fishData) {
-                        score *= 1.2; // 過去データありボーナス
+                // 魚種ごとにスコアリング
+                const fishGroups = {};
+                spot.catches.forEach(catch_ => {
+                    if (!fishGroups[catch_.fish]) {
+                        fishGroups[catch_.fish] = [];
                     }
-                }
+                    fishGroups[catch_.fish].push(catch_);
+                });
                 
-                if (score > maxScore) {
-                    maxScore = score;
+                // 各魚種で最良の釣果を選択
+                Object.keys(fishGroups).forEach(fish => {
+                    const catches = fishGroups[fish];
+                    const bestCatch = catches.reduce((a, b) => a.count > b.count ? a : b);
+                    
+                    let score = bestCatch.count * weatherBonus * tideBonus;
+                    
+                    // 過去データがあれば活用
+                    if (historical[spot.name]) {
+                        const hist = historical[spot.name];
+                        const period = Object.keys(hist)[0];
+                        const fishData = hist[period][fish];
+                        
+                        if (fishData) {
+                            score *= 1.2; // 過去データありボーナス
+                        }
+                    }
                     
                     // 過去データから範囲を取得
-                    let minSize = recentCatch.size - 3;
-                    let maxSize = recentCatch.size + 5;
-                    let minCount = Math.floor(recentCatch.count * 0.7 * weatherBonus * tideBonus);
-                    let maxCount = Math.ceil(recentCatch.count * 1.2 * weatherBonus * tideBonus);
+                    let minSize = bestCatch.size - 3;
+                    let maxSize = bestCatch.size + 5;
+                    let minCount = Math.floor(bestCatch.count * 0.7 * weatherBonus * tideBonus);
+                    let maxCount = Math.ceil(bestCatch.count * 1.2 * weatherBonus * tideBonus);
                     
                     if (historical[spot.name]) {
                         const hist = historical[spot.name];
                         const period = Object.keys(hist)[0];
-                        const fishData = hist[period][recentCatch.fish];
+                        const fishData = hist[period][fish];
                         
                         if (fishData) {
                             minSize = fishData.minSize;
@@ -442,7 +475,7 @@
                     }
                     
                     // 理由を生成
-                    let reason = `過去の実釣果データから、明日は${recentCatch.fish}が狙い目！`;
+                    let reason = `過去の実釣果データから、明日は${fish}が狙い目！`;
                     if (tomorrow.condition === '晴れ') reason += ' 晴天で活性が上がる見込み。';
                     if (tide === '大潮') reason += ' 大潮で潮が良く動き好条件。';
                     if (tide === '小潮') reason += ' 小潮だが実績のある釣り場です。';
@@ -452,7 +485,7 @@
                     if (historical[spot.name]) {
                         const hist = historical[spot.name];
                         const period = Object.keys(hist)[0];
-                        const fishData = hist[period][recentCatch.fish];
+                        const fishData = hist[period][fish];
                         if (fishData && fishData.bestTime) {
                             if (fishData.bestTime.includes('朝')) bestTime = `朝まずめ ${sunSchedule.morningBite}`;
                             if (fishData.bestTime.includes('夕')) bestTime = `夕まずめ ${sunSchedule.eveningBite}`;
@@ -462,9 +495,9 @@
                     
                     // ティップス
                     let tip = '実績のある釣り方です';
-                    if (recentCatch.method === 'サビキ') tip = '朝マズメが特に好調。アミエビをしっかり撒きましょう';
-                    if (recentCatch.method === 'エビ撒き釣り') tip = 'シラサエビを1時間1杯が目安。底を狙いましょう';
-                    if (recentCatch.method === 'フカセ釣り') tip = 'オキアミ+配合エサで。底トントンが効果的';
+                    if (bestCatch.method === 'サビキ') tip = '朝マズメが特に好調。アミエビをしっかり撒きましょう';
+                    if (bestCatch.method === 'エビ撒き釣り') tip = 'シラサエビを1時間1杯が目安。底を狙いましょう';
+                    if (bestCatch.method === 'フカセ釣り') tip = 'オキアミ+配合エサで。底トントンが効果的';
                     
                     // 信頼度計算
                     let confidence = 75;
@@ -473,65 +506,57 @@
                     if (tomorrow.condition === '晴れ') confidence += 5;
                     if (confidence > 95) confidence = 95;
                     
-                    bestPrediction = {
+                    allPredictions.push({
                         spot: spot.name,
-                        fish: recentCatch.fish,
+                        fish: fish,
                         minSize, maxSize,
                         minCount, maxCount,
-                        method: recentCatch.method,
+                        method: bestCatch.method,
                         reason,
                         bestTime,
                         tip,
                         confidence,
-                        dataPoints: spot.catches.length * 10, // 実釣果データ数の概算
+                        dataPoints: catches.length * 10,
                         date: tomorrowStr,
                         sunSchedule,
-                        tideSchedule
-                    };
-                }
+                        tideSchedule,
+                        score
+                    });
+                });
             });
             
-            // 週末予測も生成
-            if (bestPrediction) {
-                const dayOfWeek = today.getDay();
+            // スコア順にソート
+            allPredictions.sort((a, b) => b.score - a.score);
+            
+            // 上位2-3個を選択（明日のおすすめ）
+            const tomorrowPredictions = allPredictions.slice(0, 3);
+            
+            // 週末予測も生成（大物狙い優先）
+            const dayOfWeek = today.getDay();
+            let weekendPredictions = [];
+            
+            if (dayOfWeek >= 3 && dayOfWeek <= 6) { // 水曜〜土曜なら週末予測を表示
+                // 大物（チヌ、ハネ、タチウオ、青物）を優先
+                const bigFish = ['チヌ', 'ハネ', 'タチウオ', 'サワラ', 'ハマチ', 'タイ'];
+                const weekendCandidates = allPredictions.filter(p => bigFish.includes(p.fish));
                 
-                if (dayOfWeek >= 3 && dayOfWeek <= 6) { // 水曜〜土曜なら週末予測を表示
-                    // 南芦屋浜のチヌを週末のおすすめに
-                    const ashiyaspot = data.spots.find(s => s.name === '南芦屋浜');
-                    if (ashiyaspot && historical['南芦屋浜']) {
-                        const hist = historical['南芦屋浜']['1-2月'];
-                        const chinuData = hist['チヌ'];
-                        
-                        bestPrediction.weekend = {
-                            spot: '南芦屋浜',
-                            fish: 'チヌ',
-                            minSize: chinuData.minSize,
-                            maxSize: chinuData.maxSize,
-                            method: chinuData.method,
-                            reason: '週末は時間をかけて大物狙い！過去データでは30-48cmの実績多数。',
-                            confidence: 85,
-                            date: weekendStr
-                        };
-                    }
+                if (weekendCandidates.length > 0) {
+                    weekendPredictions = weekendCandidates.slice(0, 3).map(p => ({
+                        spot: p.spot,
+                        fish: p.fish,
+                        minSize: p.minSize,
+                        maxSize: p.maxSize,
+                        method: p.method,
+                        reason: `週末は時間をかけて大物狙い！過去データでは${p.minSize}-${p.maxSize}cmの実績多数。`,
+                        confidence: Math.min(p.confidence, 85),
+                        date: weekendStr
+                    }));
                 }
             }
             
-            return bestPrediction || {
-                spot: data.spots[0].name,
-                fish: data.spots[0].catches[0].fish,
-                minSize: data.spots[0].catches[0].size - 2,
-                maxSize: data.spots[0].catches[0].size + 3,
-                minCount: Math.floor(data.spots[0].catches[0].count * 0.8),
-                maxCount: data.spots[0].catches[0].count,
-                method: data.spots[0].catches[0].method,
-                reason: '最新の釣果データから分析',
-                bestTime: `朝まずめ ${sunSchedule.morningBite}`,
-                tip: '実績のある釣り方です',
-                confidence: 75,
-                dataPoints: 10,
-                date: tomorrowStr,
-                sunSchedule,
-                tideSchedule
+            return {
+                tomorrow: tomorrowPredictions,
+                weekend: weekendPredictions
             };
         }
         
@@ -561,24 +586,28 @@
             const content = document.getElementById('content');
             
             // AI予測ロジック（過去データ + 天気 + 潮汐考慮）
-            const prediction = generateSmartPrediction(data);
+            const predictions = generateSmartPrediction(data);
             
             let html = `
                 <!-- AI予測 -->
                 <div class="ai-section">
                     <div class="section-title" style="color: white;">🤖 AI釣果予測（過去データ分析 + 天気・潮汐考慮）</div>
-                    
-                    <div class="rec-spot">
-                        <div class="rec-spot-name">🏆 明日 ${prediction.date} のおすすめ：${prediction.spot}</div>
+            `;
+            
+            // 明日のおすすめ（2-3個）
+            predictions.tomorrow.forEach((prediction, index) => {
+                html += `
+                    <div class="rec-spot"${index > 0 ? ' style="margin-top: 16px; background: rgba(255,255,255,0.12);"' : ''}>
+                        <div class="rec-spot-name">${index === 0 ? '🏆' : '⭐'} 明日 ${prediction.date} のおすすめ${index + 1}：${prediction.spot}</div>
                         <div class="rec-reason">
                             ${prediction.reason}
                         </div>
                         <div class="rec-details">
-                            <strong>🌅 まずめ時間：</strong><br>
+                            ${index === 0 ? `<strong>🌅 まずめ時間：</strong><br>
                             朝まずめ ${prediction.sunSchedule.morningBite} / 夕まずめ ${prediction.sunSchedule.eveningBite}<br><br>
                             <strong>🌊 潮汐：</strong><br>
                             満潮 ${prediction.tideSchedule.highTides[0]} / ${prediction.tideSchedule.highTides[1]}<br>
-                            干潮 ${prediction.tideSchedule.lowTides[0]} / ${prediction.tideSchedule.lowTides[1]}<br><br>
+                            干潮 ${prediction.tideSchedule.lowTides[0]} / ${prediction.tideSchedule.lowTides[1]}<br><br>` : ''}
                             <strong>🎣 狙い目時間：</strong>${prediction.bestTime}<br>
                             <strong>予想釣果：</strong>${prediction.fish} ${prediction.minCount}-${prediction.maxCount}匹<br>
                             <strong>予想サイズ：</strong>${prediction.minSize}-${prediction.maxSize}cm
@@ -590,22 +619,30 @@
                         </div>
                         <div class="confidence">信頼度: ${prediction.confidence}%（過去${prediction.dataPoints}件の実釣果ベース）</div>
                     </div>
-                    
-                    ${prediction.weekend ? `
+                `;
+            });
+            
+            // 週末のおすすめ（2-3個）
+            if (predictions.weekend && predictions.weekend.length > 0) {
+                predictions.weekend.forEach((w, index) => {
+                    html += `
                     <div class="rec-spot" style="margin-top: 16px; background: rgba(255,255,255,0.15);">
-                        <div class="rec-spot-name">📅 週末 ${prediction.weekend.date} のおすすめ</div>
+                        <div class="rec-spot-name">${index === 0 ? '📅' : '📍'} 週末 ${w.date} のおすすめ${index + 1}</div>
                         <div class="rec-reason">
-                            ${prediction.weekend.reason}
+                            ${w.reason}
                         </div>
                         <div class="rec-details">
-                            <strong>狙い目：</strong>${prediction.weekend.fish} (${prediction.weekend.minSize}-${prediction.weekend.maxSize}cm)<br>
-                            <strong>場所：</strong>${prediction.weekend.spot}<br>
-                            <strong>釣法：</strong>${prediction.weekend.method}
+                            <strong>狙い目：</strong>${w.fish} (${w.minSize}-${w.maxSize}cm)<br>
+                            <strong>場所：</strong>${w.spot}<br>
+                            <strong>釣法：</strong>${w.method}
                         </div>
-                        <div class="confidence">信頼度: ${prediction.weekend.confidence}%</div>
+                        <div class="confidence">信頼度: ${w.confidence}%</div>
                     </div>
-                    ` : ''}
-                </div>
+                    `;
+                });
+            }
+            
+            html += `</div>`;
                 
                 <!-- 天気予報 -->
                 <div class="section">
@@ -664,19 +701,23 @@
                             <div class="spot-card">
                                 <div class="spot-area">${spot.area}</div>
                                 <div class="spot-header">
-                                    <div class="spot-name">${spot.name}</div>
+                                    <div class="spot-name">${spot.name} <span style="font-size: 14px; opacity: 0.8;">(釣果${spot.catches.length}件)</span></div>
                                     <div class="spot-distance">${spot.distance}km</div>
                                 </div>
                                 <div class="spot-info">${spot.info}</div>
                         `;
                         
-                        spot.catches.forEach(catch_ => {
+                        const maxInitial = 5; // 最初に表示する件数
+                        const totalCatches = spot.catches.length;
+                        
+                        spot.catches.forEach((catch_, index) => {
                             const unit = catch_.fish === 'タコ' || catch_.fish === 'アオリイカ' ? 'g' : 'cm';
+                            const isHidden = index >= maxInitial && totalCatches > maxInitial;
                             html += `
-                                <div class="catch-item">
+                                <div class="catch-item${isHidden ? ' hidden-catch' : ''}" data-spot="${spot.name}">
                                     <div class="catch-header">
                                         <div class="catch-fish">🐟 ${catch_.fish} ${catch_.size}${unit}${catch_.count > 1 ? ` × ${catch_.count}匹` : ''}</div>
-                                        <div class="catch-time">${catch_.time}</div>
+                                        <div class="catch-time">${formatCatchTime(catch_.time)}</div>
                                     </div>
                                     <div class="catch-details">
                                         ${catch_.user}さん | ${catch_.method}
@@ -684,6 +725,15 @@
                                 </div>
                             `;
                         });
+                        
+                        // もっと見るボタン
+                        if (totalCatches > maxInitial) {
+                            html += `
+                                <button class="show-more-btn" onclick="toggleCatches('${spot.name}', this)">
+                                    もっと見る（残り${totalCatches - maxInitial}件）
+                                </button>
+                            `;
+                        }
                         
                         html += `</div>`;
                     });
@@ -722,6 +772,32 @@
             }
             
             document.getElementById('last-update').textContent = `✅ ${timeAgo}`;
+        }
+        
+        // 日時フォーマット
+        function formatCatchTime(isoTime) {
+            const date = new Date(isoTime);
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            const hours = date.getHours().toString().padStart(2, '0');
+            const minutes = date.getMinutes().toString().padStart(2, '0');
+            return `${month}/${day} ${hours}:${minutes}`;
+        }
+        
+        // 釣果の表示切り替え
+        function toggleCatches(spotName, button) {
+            const hiddenCatches = document.querySelectorAll(`.hidden-catch[data-spot="${spotName}"]`);
+            const isShowing = button.textContent.includes('閉じる');
+            
+            hiddenCatches.forEach(catch_ => {
+                catch_.style.display = isShowing ? 'none' : 'block';
+            });
+            
+            if (isShowing) {
+                button.textContent = `もっと見る（残り${hiddenCatches.length}件）`;
+            } else {
+                button.textContent = '閉じる';
+            }
         }
         
         // 自動リロード（5分ごと）
