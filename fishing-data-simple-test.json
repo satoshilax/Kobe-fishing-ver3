@@ -1,0 +1,40 @@
+{
+  "lastUpdated": "2026-02-14T15:45:00+09:00",
+  "spots": [
+    {
+      "name": "須磨海釣り公園",
+      "area": "神戸",
+      "distance": 2.3,
+      "info": "テスト中",
+      "catches": [
+        {"fish": "アジ", "size": 18, "count": 42, "time": "2026-02-14T06:30:00", "user": "テスト", "method": "サビキ"}
+      ]
+    }
+  ],
+  "weatherForecast": [
+    {"date": "今日", "temp": 10, "condition": "晴れ", "icon": "☀️", "wind": "北西 4m/s", "rain": "10%"},
+    {"date": "明日", "temp": 11, "condition": "晴れ", "icon": "☀️", "wind": "北 3m/s", "rain": "10%"}
+  ],
+  "moonPhase": {
+    "age": 13.5,
+    "name": "小潮",
+    "icon": "🌔",
+    "tide": "小潮",
+    "fishing": "まずまず"
+  },
+  "tideSchedule": {
+    "today": {"highTides": ["04:32", "16:48"], "lowTides": ["10:45", "23:12"]},
+    "tomorrow": {"highTides": ["05:18", "17:32"], "lowTides": ["11:28", "23:58"]}
+  },
+  "sunSchedule": {
+    "today": {"sunrise": "06:47", "sunset": "17:46", "morningBite": "06:15-07:15", "eveningBite": "17:15-18:15"},
+    "tomorrow": {"sunrise": "06:46", "sunset": "17:47", "morningBite": "06:15-07:15", "eveningBite": "17:15-18:15"}
+  },
+  "historicalData": {
+    "須磨海釣り公園": {
+      "2月": {
+        "アジ": {"minSize": 14, "maxSize": 25, "avgCount": 30, "method": "サビキ"}
+      }
+    }
+  }
+}
