@@ -5,192 +5,68 @@
       "name": "須磨海釣り公園",
       "area": "神戸",
       "distance": 2.3,
-      "info": "2024年11月リニューアル・ファミリー向け・営業7:00-17:00",
+      "info": "2024年11月リニューアル・営業7:00-17:00・2月月間大物賞開催中",
       "catches": [
-        {
-          "fish": "アジ",
-          "size": 17,
-          "count": 28,
-          "time": "2時間前",
-          "user": "ファミリー釣り師",
-          "method": "サビキ"
-        },
-        {
-          "fish": "タイ",
-          "size": 38,
-          "count": 1,
-          "time": "3時間前",
-          "user": "のませ釣り名人",
-          "method": "のませ釣り"
-        },
-        {
-          "fish": "アイナメ",
-          "size": 26,
-          "count": 2,
-          "time": "4時間前",
-          "user": "根魚ハンター",
-          "method": "探り釣り"
-        },
-        {
-          "fish": "カワハギ",
-          "size": 23,
-          "count": 4,
-          "time": "5時間前",
-          "user": "カワハギ師",
-          "method": "胴突き"
-        }
+        {"fish": "アジ", "size": 18, "count": 35, "time": "朝", "user": "ファミリー釣り師", "method": "サビキ"},
+        {"fish": "サバ", "size": 32, "count": 20, "time": "夕方", "user": "サビキマスター", "method": "サビキ"},
+        {"fish": "チヌ", "size": 38, "count": 1, "time": "3時間前", "user": "落とし込み師", "method": "落とし込み"},
+        {"fish": "サヨリ", "size": 28, "count": 5, "time": "4時間前", "user": "サヨリ名人", "method": "サヨリ仕掛け"}
       ]
     },
     {
       "name": "南芦屋浜",
       "area": "尼崎",
       "distance": 5.8,
-      "info": "エビ撒きハネダービー開催中・開門8:00-20:00",
+      "info": "エビ撒きハネダービー開催中・開門8:00-20:00・チヌ30-48cm実績",
       "catches": [
-        {
-          "fish": "ハネ",
-          "size": 45,
-          "count": 10,
-          "time": "朝マズメ",
-          "user": "エビ撒き師",
-          "method": "エビ撒き釣り"
-        },
-        {
-          "fish": "チヌ",
-          "size": 44,
-          "count": 1,
-          "time": "2時間前",
-          "user": "フカセ名人",
-          "method": "フカセ釣り"
-        },
-        {
-          "fish": "チヌ",
-          "size": 40,
-          "count": 1,
-          "time": "3時間前",
-          "user": "ルアーマン",
-          "method": "ルアー"
-        },
-        {
-          "fish": "タイ",
-          "size": 42,
-          "count": 1,
-          "time": "4時間前",
-          "user": "南芦屋浜常連",
-          "method": "フカセ釣り"
-        },
-        {
-          "fish": "シーバス",
-          "size": 68,
-          "count": 1,
-          "time": "5時間前",
-          "user": "シーバスハンター",
-          "method": "ルアー"
-        }
+        {"fish": "チヌ", "size": 45, "count": 1, "time": "朝", "user": "フカセ名人", "method": "フカセ釣り"},
+        {"fish": "チヌ", "size": 42, "count": 1, "time": "2時間前", "user": "エビ撒き師", "method": "エビ撒き釣り"},
+        {"fish": "チヌ", "size": 38, "count": 1, "time": "3時間前", "user": "コーン使い", "method": "フカセ釣り"},
+        {"fish": "ハネ", "size": 48, "count": 3, "time": "朝マズメ", "user": "エビ撒きマスター", "method": "エビ撒き釣り"},
+        {"fish": "アジ", "size": 16, "count": 15, "time": "4時間前", "user": "サビキ釣り師", "method": "サビキ"},
+        {"fish": "サバ", "size": 28, "count": 12, "time": "5時間前", "user": "青物狙い", "method": "サビキ"}
       ]
     },
     {
       "name": "神戸空港ベランダ",
       "area": "神戸",
       "distance": 4.1,
-      "info": "朝マズメにアジ好調・青物回遊あり",
+      "info": "朝マズメアジ好調・メバル・ガシラ実績",
       "catches": [
-        {
-          "fish": "アジ",
-          "size": 15,
-          "count": 35,
-          "time": "朝マズメ",
-          "user": "サビキ師",
-          "method": "サビキ"
-        },
-        {
-          "fish": "メバル",
-          "size": 19,
-          "count": 6,
-          "time": "3時間前",
-          "user": "エビ撒き勢",
-          "method": "エビ撒き釣り"
-        },
-        {
-          "fish": "カサゴ",
-          "size": 18,
-          "count": 8,
-          "time": "4時間前",
-          "user": "根魚狙い",
-          "method": "探り釣り"
-        },
-        {
-          "fish": "サワラ",
-          "size": 65,
-          "count": 1,
-          "time": "5時間前",
-          "user": "ショアジギ師",
-          "method": "ショアジギング"
-        }
+        {"fish": "アジ", "size": 16, "count": 28, "time": "朝マズメ", "user": "サビキ師", "method": "サビキ"},
+        {"fish": "メバル", "size": 19, "count": 5, "time": "3時間前", "user": "エビ撒き勢", "method": "エビ撒き釣り"},
+        {"fish": "ガシラ", "size": 18, "count": 8, "time": "4時間前", "user": "根魚狙い", "method": "探り釣り"},
+        {"fish": "カサゴ", "size": 20, "count": 6, "time": "5時間前", "user": "ロックフィッシュ", "method": "ルアー"}
       ]
     },
     {
       "name": "アジュール舞子",
       "area": "神戸",
       "distance": 6.8,
-      "info": "サビキ釣り・初心者向け",
+      "info": "サビキ釣り・初心者向け・エビ撒き実績",
       "catches": [
-        {
-          "fish": "アジ",
-          "size": 14,
-          "count": 30,
-          "time": "2時間前",
-          "user": "家族釣り",
-          "method": "サビキ"
-        },
-        {
-          "fish": "サバ",
-          "size": 27,
-          "count": 15,
-          "time": "4時間前",
-          "user": "サビキマスター",
-          "method": "サビキ"
-        }
+        {"fish": "アジ", "size": 15, "count": 25, "time": "2時間前", "user": "家族釣り", "method": "サビキ"},
+        {"fish": "サバ", "size": 26, "count": 18, "time": "4時間前", "user": "サビキマスター", "method": "サビキ"}
       ]
     },
     {
       "name": "六甲アイランド",
       "area": "神戸",
       "distance": 3.5,
-      "info": "2/21イベント予定・タチウオ・青物",
+      "info": "2/21六甲マリンパークでイベント・タチウオ・青物",
       "catches": [
-        {
-          "fish": "タチウオ",
-          "size": 92,
-          "count": 2,
-          "time": "昨夜",
-          "user": "夜釣り名人",
-          "method": "ワインド"
-        }
+        {"fish": "タチウオ", "size": 88, "count": 2, "time": "昨夜", "user": "夜釣り名人", "method": "ワインド"}
       ]
     },
     {
       "name": "明石港",
       "area": "明石",
       "distance": 18.5,
-      "info": "タコ・メバル・船釣りも人気",
+      "info": "船メバル好調・ガシラ実績・松兵衛渡船",
       "catches": [
-        {
-          "fish": "メバル",
-          "size": 24,
-          "count": 6,
-          "time": "3時間前",
-          "user": "船メバル師",
-          "method": "船釣り"
-        },
-        {
-          "fish": "ガシラ",
-          "size": 22,
-          "count": 15,
-          "time": "4時間前",
-          "user": "ロックフィッシュ",
-          "method": "ルアー"
-        }
+        {"fish": "メバル", "size": 24, "count": 6, "time": "3時間前", "user": "船メバル師", "method": "船釣り"},
+        {"fish": "ガシラ", "size": 22, "count": 15, "time": "4時間前", "user": "ロックフィッシュ", "method": "ルアー"},
+        {"fish": "チヌ", "size": 40, "count": 1, "time": "5時間前", "user": "船釣り師", "method": "船釣り"}
       ]
     },
     {
@@ -199,14 +75,7 @@
       "distance": 5.2,
       "info": "キス・カレイ・投げ釣り",
       "catches": [
-        {
-          "fish": "キス",
-          "size": 22,
-          "count": 7,
-          "time": "5時間前",
-          "user": "投げ釣り師",
-          "method": "投げ釣り"
-        }
+        {"fish": "キス", "size": 21, "count": 6, "time": "5時間前", "user": "投げ釣り師", "method": "投げ釣り"}
       ]
     }
   ],
@@ -243,5 +112,31 @@
     "tide": "小潮",
     "fishing": "まずまずの釣り日和",
     "nextBigTide": "2月17日〜19日（大潮）"
+  },
+  "historicalData": {
+    "須磨海釣り公園": {
+      "2月": {
+        "アジ": {"minSize": 14, "maxSize": 25, "avgCount": 30, "method": "サビキ"},
+        "サバ": {"minSize": 26, "maxSize": 35, "avgCount": 20, "method": "サビキ"},
+        "チヌ": {"minSize": 30, "maxSize": 45, "avgCount": 2, "method": "落とし込み"},
+        "サヨリ": {"minSize": 25, "maxSize": 32, "avgCount": 5, "method": "サヨリ仕掛け"}
+      }
+    },
+    "南芦屋浜": {
+      "1-2月": {
+        "チヌ": {"minSize": 30, "maxSize": 48, "avgCount": 3, "method": "フカセ/エビ撒き", "bestTime": "朝"},
+        "ハネ": {"minSize": 40, "maxSize": 52, "avgCount": 5, "method": "エビ撒き釣り", "bestTime": "朝/夕"},
+        "アジ": {"minSize": 14, "maxSize": 18, "avgCount": 15, "method": "サビキ"},
+        "サバ": {"minSize": 25, "maxSize": 32, "avgCount": 12, "method": "サビキ"}
+      }
+    },
+    "神戸空港": {
+      "冬-春": {
+        "アジ": {"minSize": 14, "maxSize": 20, "avgCount": 25, "method": "サビキ", "bestTime": "朝マズメ"},
+        "メバル": {"minSize": 16, "maxSize": 22, "avgCount": 6, "method": "エビ撒き"},
+        "ガシラ": {"minSize": 16, "maxSize": 22, "avgCount": 8, "method": "探り釣り"},
+        "カサゴ": {"minSize": 18, "maxSize": 24, "avgCount": 6, "method": "ルアー"}
+      }
+    }
   }
 }
