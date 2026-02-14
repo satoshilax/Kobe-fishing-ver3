@@ -113,6 +113,30 @@
     "fishing": "まずまずの釣り日和",
     "nextBigTide": "2月17日〜19日（大潮）"
   },
+  "tideSchedule": {
+    "today": {
+      "highTides": ["04:32", "16:48"],
+      "lowTides": ["10:45", "23:12"]
+    },
+    "tomorrow": {
+      "highTides": ["05:18", "17:32"],
+      "lowTides": ["11:28", "23:58"]
+    }
+  },
+  "sunSchedule": {
+    "today": {
+      "sunrise": "06:47",
+      "sunset": "17:46",
+      "morningBite": "06:15-07:15",
+      "eveningBite": "17:15-18:15"
+    },
+    "tomorrow": {
+      "sunrise": "06:46",
+      "sunset": "17:47",
+      "morningBite": "06:15-07:15",
+      "eveningBite": "17:15-18:15"
+    }
+  },
   "historicalData": {
     "須磨海釣り公園": {
       "2月": {

@@ -360,6 +360,30 @@
             const tide = data.moonPhase.tide;
             const historical = data.historicalData || {};
             
+            // 日付計算
+            const today = new Date();
+            const tomorrowDate = new Date(today);
+            tomorrowDate.setDate(today.getDate() + 1);
+            const tomorrowStr = `${tomorrowDate.getMonth() + 1}月${tomorrowDate.getDate()}日(${['日','月','火','水','木','金','土'][tomorrowDate.getDay()]})`;
+            
+            // 週末の日付計算
+            const daysUntilSat = (6 - today.getDay() + 7) % 7 || 7;
+            const saturday = new Date(today);
+            saturday.setDate(today.getDate() + daysUntilSat);
+            const sunday = new Date(saturday);
+            sunday.setDate(saturday.getDate() + 1);
+            const weekendStr = `${saturday.getMonth() + 1}/${saturday.getDate()}(土)・${sunday.getMonth() + 1}/${sunday.getDate()}(日)`;
+            
+            // まずめ時間と潮汐情報
+            const sunSchedule = data.sunSchedule?.tomorrow || {
+                morningBite: "06:15-07:15",
+                eveningBite: "17:15-18:15"
+            };
+            const tideSchedule = data.tideSchedule?.tomorrow || {
+                highTides: ["05:18", "17:32"],
+                lowTides: ["11:28", "23:58"]
+            };
+            
             // 天気と潮汐による補正
             let weatherBonus = 1.0;
             if (tomorrow.condition === '晴れ') weatherBonus = 1.2;
@@ -424,15 +448,15 @@
                     if (tide === '小潮') reason += ' 小潮だが実績のある釣り場です。';
                     
                     // ベストタイム
-                    let bestTime = '朝まずめ 06:00-08:00';
+                    let bestTime = `朝まずめ ${sunSchedule.morningBite}`;
                     if (historical[spot.name]) {
                         const hist = historical[spot.name];
                         const period = Object.keys(hist)[0];
                         const fishData = hist[period][recentCatch.fish];
                         if (fishData && fishData.bestTime) {
-                            if (fishData.bestTime.includes('朝')) bestTime = '朝まずめ 06:00-08:00';
-                            if (fishData.bestTime.includes('夕')) bestTime = '夕まずめ 16:00-18:00';
-                            if (fishData.bestTime.includes('朝/夕')) bestTime = '朝まずめ 06:00-08:00 / 夕まずめ 16:00-18:00';
+                            if (fishData.bestTime.includes('朝')) bestTime = `朝まずめ ${sunSchedule.morningBite}`;
+                            if (fishData.bestTime.includes('夕')) bestTime = `夕まずめ ${sunSchedule.eveningBite}`;
+                            if (fishData.bestTime.includes('朝/夕')) bestTime = `朝まずめ ${sunSchedule.morningBite} / 夕まずめ ${sunSchedule.eveningBite}`;
                         }
                     }
                     
@@ -459,14 +483,16 @@
                         bestTime,
                         tip,
                         confidence,
-                        dataPoints: spot.catches.length * 10 // 実釣果データ数の概算
+                        dataPoints: spot.catches.length * 10, // 実釣果データ数の概算
+                        date: tomorrowStr,
+                        sunSchedule,
+                        tideSchedule
                     };
                 }
             });
             
             // 週末予測も生成
             if (bestPrediction) {
-                const today = new Date();
                 const dayOfWeek = today.getDay();
                 
                 if (dayOfWeek >= 3 && dayOfWeek <= 6) { // 水曜〜土曜なら週末予測を表示
@@ -483,7 +509,8 @@
                             maxSize: chinuData.maxSize,
                             method: chinuData.method,
                             reason: '週末は時間をかけて大物狙い！過去データでは30-48cmの実績多数。',
-                            confidence: 85
+                            confidence: 85,
+                            date: weekendStr
                         };
                     }
                 }
@@ -498,10 +525,13 @@
                 maxCount: data.spots[0].catches[0].count,
                 method: data.spots[0].catches[0].method,
                 reason: '最新の釣果データから分析',
-                bestTime: '朝まずめ 06:00-08:00',
+                bestTime: `朝まずめ ${sunSchedule.morningBite}`,
                 tip: '実績のある釣り方です',
                 confidence: 75,
-                dataPoints: 10
+                dataPoints: 10,
+                date: tomorrowStr,
+                sunSchedule,
+                tideSchedule
             };
         }
         
@@ -539,12 +569,17 @@
                     <div class="section-title" style="color: white;">🤖 AI釣果予測（過去データ分析 + 天気・潮汐考慮）</div>
                     
                     <div class="rec-spot">
-                        <div class="rec-spot-name">🏆 明日のおすすめ：${prediction.spot}</div>
+                        <div class="rec-spot-name">🏆 明日 ${prediction.date} のおすすめ：${prediction.spot}</div>
                         <div class="rec-reason">
                             ${prediction.reason}
                         </div>
                         <div class="rec-details">
-                            <strong>狙い目時間：</strong>${prediction.bestTime}<br>
+                            <strong>🌅 まずめ時間：</strong><br>
+                            朝まずめ ${prediction.sunSchedule.morningBite} / 夕まずめ ${prediction.sunSchedule.eveningBite}<br><br>
+                            <strong>🌊 潮汐：</strong><br>
+                            満潮 ${prediction.tideSchedule.highTides[0]} / ${prediction.tideSchedule.highTides[1]}<br>
+                            干潮 ${prediction.tideSchedule.lowTides[0]} / ${prediction.tideSchedule.lowTides[1]}<br><br>
+                            <strong>🎣 狙い目時間：</strong>${prediction.bestTime}<br>
                             <strong>予想釣果：</strong>${prediction.fish} ${prediction.minCount}-${prediction.maxCount}匹<br>
                             <strong>予想サイズ：</strong>${prediction.minSize}-${prediction.maxSize}cm
                         </div>
@@ -558,7 +593,7 @@
                     
                     ${prediction.weekend ? `
                     <div class="rec-spot" style="margin-top: 16px; background: rgba(255,255,255,0.15);">
-                        <div class="rec-spot-name">📅 週末（土日）のおすすめ</div>
+                        <div class="rec-spot-name">📅 週末 ${prediction.weekend.date} のおすすめ</div>
                         <div class="rec-reason">
                             ${prediction.weekend.reason}
                         </div>
