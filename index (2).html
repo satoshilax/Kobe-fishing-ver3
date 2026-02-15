@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0b1929">
+<title>🎣 神戸釣り情報 v6.0</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0b1929;--card:#12243d;--card2:#182d4a;
+--acc:#00c2e0;--acc2:#0090b8;--gold:#f5a623;--grn:#26b895;--red:#e8634a;
+--txt:#e4ecf5;--txt2:#7a90a8;--bdr:#1c3455;
+}
+html{font-size:15px;scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;-webkit-font-smoothing:antialiased;padding-bottom:68px}
+.hdr{background:linear-gradient(180deg,#0f1f35,var(--bg));border-bottom:1px solid var(--bdr);padding:14px 16px 10px;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+.hdr-row{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.2rem;font-weight:800;background:linear-gradient(120deg,var(--acc),var(--grn));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.ver{font-size:.6rem;font-weight:600;background:var(--acc);color:#000;padding:2px 7px;border-radius:8px}
+.hdr-date{font-size:.72rem;color:var(--txt2);margin-top:3px}
+.tabs{display:flex;gap:6px;padding:10px 16px 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex-shrink:0;padding:7px 15px;border-radius:18px;font-size:.78rem;font-weight:600;border:1px solid var(--bdr);background:transparent;color:var(--txt2);cursor:pointer;transition:.2s;font-family:inherit}
+.tab.on{background:var(--acc);color:#000;border-color:var(--acc);box-shadow:0 0 12px rgba(0,194,224,.25)}
+.sec{padding:14px 16px;display:none}
+.sec.on{display:block}
+.sec-t{font-size:1rem;font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.pc{background:linear-gradient(140deg,var(--card),var(--card2));border:1px solid var(--bdr);border-radius:14px;padding:14px;margin-bottom:12px;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.pc.g1::before{background:linear-gradient(90deg,var(--gold),var(--red))}
+.pc.g2::before{background:linear-gradient(90deg,var(--acc),var(--grn))}
+.pc.g3::before{background:linear-gradient(90deg,var(--grn),var(--acc2))}
+.badge{display:inline-block;font-size:.65rem;font-weight:700;padding:2px 9px;border-radius:10px;margin-bottom:6px}
+.b1{background:var(--gold);color:#000}.b2{background:var(--acc);color:#000}.b3{background:var(--grn);color:#fff}
+.pc-name{font-size:1.05rem;font-weight:800;margin-bottom:3px}
+.pc-desc{font-size:.78rem;color:var(--txt2);line-height:1.5;margin-bottom:10px}
+.pc-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px}
+.pc-item{background:rgba(0,0,0,.2);border-radius:9px;padding:7px 9px}
+.pc-label{font-size:.62rem;color:var(--txt2);margin-bottom:1px}
+.pc-val{font-size:.82rem;font-weight:700}
+.pc-val.hi{color:var(--gold)}
+.pc-val.ac{color:var(--acc)}
+.pc-tackle{background:rgba(0,194,224,.07);border:1px solid rgba(0,194,224,.12);border-radius:9px;padding:9px;margin-top:8px}
+.pc-tt{font-size:.67rem;color:var(--acc);font-weight:700;margin-bottom:3px}
+.pc-tx{font-size:.78rem;line-height:1.55}
+.conf{display:flex;align-items:center;gap:6px;margin-top:8px}
+.conf-bar{flex:1;height:5px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden}
+.conf-fill{height:100%;border-radius:3px}
+.conf-txt{font-size:.67rem;font-weight:700;min-width:36px;text-align:right}
+.tide-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:12px;margin-bottom:12px}
+.tide-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0}
+.tide-row+.tide-row{border-top:1px solid rgba(255,255,255,.04)}
+.tide-k{font-size:.72rem;color:var(--txt2);display:flex;align-items:center;gap:5px}
+.tide-v{font-size:.82rem;font-weight:700}
+.tide-v.ac{color:var(--acc)}.tide-v.gd{color:var(--gold)}
+.spot{background:var(--card);border:1px solid var(--bdr);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.spot-hdr{padding:12px 14px 8px;display:flex;justify-content:space-between;align-items:flex-start}
+.spot-name{font-size:.95rem;font-weight:800}
+.spot-cnt{font-size:.62rem;color:var(--acc);font-weight:600;background:rgba(0,194,224,.1);padding:2px 8px;border-radius:8px;white-space:nowrap}
+.spot-info{font-size:.7rem;color:var(--txt2);padding:0 14px 8px;line-height:1.4}
+.catch-list{padding:0 10px 6px}
+.catch{display:flex;align-items:center;gap:8px;padding:7px 6px;border-top:1px solid rgba(255,255,255,.03)}
+.catch-icon{font-size:1.1rem;flex-shrink:0}
+.catch-body{flex:1;min-width:0}
+.catch-main{font-size:.8rem;font-weight:700}
+.catch-sub{font-size:.68rem;color:var(--txt2);margin-top:1px}
+.catch-time{font-size:.65rem;color:var(--txt2);flex-shrink:0;text-align:right}
+.more-btn{display:block;width:100%;padding:8px;background:rgba(0,194,224,.06);border:none;border-top:1px solid var(--bdr);color:var(--acc);font-size:.75rem;font-weight:600;cursor:pointer;font-family:inherit}
+.catch.hid{display:none}
+.nav{position:fixed;bottom:0;left:0;right:0;background:rgba(11,25,41,.95);border-top:1px solid var(--bdr);display:flex;z-index:100;backdrop-filter:blur(12px);padding-bottom:env(safe-area-inset-bottom)}
+.nav-btn{flex:1;padding:8px 0 6px;text-align:center;font-size:.6rem;font-weight:600;color:var(--txt2);border:none;background:none;cursor:pointer;font-family:inherit;transition:.2s}
+.nav-btn.on{color:var(--acc)}
+.nav-ico{font-size:1.2rem;display:block;margin-bottom:1px}
+.area-f{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:10px}
+.af{padding:5px 12px;border-radius:14px;font-size:.7rem;font-weight:600;border:1px solid var(--bdr);background:transparent;color:var(--txt2);cursor:pointer;font-family:inherit}
+.af.on{background:var(--card2);border-color:var(--acc);color:var(--acc)}
+.hist-card{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:12px;margin-bottom:8px}
+.hist-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.hist-spot{font-size:.82rem;font-weight:700}
+.hist-date{font-size:.65rem;color:var(--txt2)}
+.hist-fish{font-size:.78rem;color:var(--gold);font-weight:600}
+.hist-method{font-size:.68rem;color:var(--txt2);margin-top:2px}
+.divider{height:1px;background:var(--bdr);margin:16px 0}
+.footer{text-align:center;padding:20px 0 10px;font-size:.65rem;color:var(--txt2)}
+</style>
+</head>
+<body>
+<div class="hdr">
+ <div class="hdr-row">
+  <div><span class="logo">🎣 神戸釣り情報</span> <span class="ver">v6.0</span></div>
+ </div>
+ <div class="hdr-date" id="headerDate"></div>
+</div>
+<div class="tabs">
+ <button class="tab on" data-sec="ai">🤖 AI予測</button>
+ <button class="tab" data-sec="spots">📍 釣り場</button>
+ <button class="tab" data-sec="history">📊 釣果履歴</button>
+</div>
+
+<div class="sec on" id="sec-ai">
+ <div class="sec-t">🌊 今日の潮汐・まずめ情報</div>
+ <div class="tide-box">
+  <div class="tide-row"><span class="tide-k">📅 日付</span><span class="tide-v" id="todayDate"></span></div>
+  <div class="tide-row"><span class="tide-k">🌊 潮</span><span class="tide-v ac" id="tideType"></span></div>
+  <div class="tide-row"><span class="tide-k">🌖 月齢</span><span class="tide-v" id="moonAge"></span></div>
+  <div class="tide-row"><span class="tide-k">⬆️ 満潮</span><span class="tide-v gd" id="highTide"></span></div>
+  <div class="tide-row"><span class="tide-k">⬇️ 干潮</span><span class="tide-v" id="lowTide"></span></div>
+  <div class="tide-row"><span class="tide-k">🌅 朝まずめ</span><span class="tide-v ac" id="amMaz"></span></div>
+  <div class="tide-row"><span class="tide-k">🌇 夕まずめ</span><span class="tide-v ac" id="pmMaz"></span></div>
+ </div>
+ <div class="sec-t" id="tmrT"></div>
+ <div id="tmrC"></div>
+ <div class="divider"></div>
+ <div class="sec-t" id="wkT"></div>
+ <div id="wkC"></div>
+</div>
+
+<div class="sec" id="sec-spots">
+ <div class="sec-t">📍 釣りスポット一覧</div>
+ <div class="area-f" id="aFilt"></div>
+ <div id="sList"></div>
+</div>
+
+<div class="sec" id="sec-history">
+ <div class="sec-t">📊 最近の釣果履歴</div>
+ <div class="area-f" id="hFilt"></div>
+ <div id="hList"></div>
+</div>
+
+<div class="nav">
+ <button class="nav-btn on" data-sec="ai"><span class="nav-ico">🤖</span>AI予測</button>
+ <button class="nav-btn" data-sec="spots"><span class="nav-ico">📍</span>釣り場</button>
+ <button class="nav-btn" data-sec="history"><span class="nav-ico">📊</span>履歴</button>
+</div>
+
+<script>
+var D={
+ tide:{type:"中潮",moon:17.5,high:["05:42","18:06"],low:["11:52","--:--"],am:"06:20 - 07:20",pm:"17:10 - 18:10"},
+ tideTmr:{type:"中潮",high:["06:15","18:38"],low:["12:24","00:18"],am:"06:19 - 07:19",pm:"17:11 - 18:11"},
+ spots:[
+  {n:"須磨海釣り公園",a:"神戸",d:2.3,info:"ファミリー向け・足場良好・設備充実・駐車場あり",c:[
+   {f:"アジ",s:"18-25cm",ct:"30匹",t:"2/14 06:30",u:"サビキ太郎",m:"サビキ",i:"🐟"},
+   {f:"アジ",s:"15-20cm",ct:"50匹超",t:"2/13 07:00",u:"朝活釣り師",m:"サビキ",i:"🐟"},
+   {f:"サバ",s:"28cm",ct:"12匹",t:"2/14 08:15",u:"サビキマスター",m:"サビキ",i:"🐟"},
+   {f:"チヌ",s:"38cm",ct:"1匹",t:"2/14 10:00",u:"フカセ職人",m:"フカセ釣り",i:"🐡"},
+   {f:"サヨリ",s:"25-30cm",ct:"20匹",t:"2/13 14:00",u:"連掛け名人",m:"サヨリ仕掛け",i:"🐟"},
+   {f:"カワハギ",s:"22cm",ct:"5匹",t:"2/13 11:30",u:"エサ取り名人",m:"胴突き",i:"🐡"},
+   {f:"アイナメ",s:"30cm",ct:"2匹",t:"2/12 15:00",u:"根魚ハンター",m:"ブラクリ",i:"🐟"},
+   {f:"タイ",s:"38cm",ct:"1匹",t:"2/12 09:30",u:"のませ師",m:"のませ釣り",i:"🎣"},
+   {f:"ガシラ",s:"20cm",ct:"8匹",t:"2/11 16:00",u:"穴釣り名人",m:"穴釣り",i:"🐡"},
+   {f:"サバ",s:"30cm",ct:"8匹",t:"2/11 07:30",u:"ファミリー釣り",m:"サビキ",i:"🐟"},
+   {f:"アジ",s:"22cm",ct:"40匹",t:"2/10 06:45",u:"早朝アングラー",m:"サビキ",i:"🐟"},
+   {f:"チヌ",s:"42cm",ct:"1匹",t:"2/10 13:00",u:"ダンゴ釣り師",m:"紀州釣り",i:"🐡"}
+  ]},
+  {n:"南芦屋浜",a:"尼崎",d:5.8,info:"関西最大級・エビ撒きハネダービー開催中・開門8:00~20:00",c:[
+   {f:"チヌ",s:"45cm",ct:"1匹",t:"2/14 06:30",u:"フカセ名人",m:"フカセ釣り",i:"🐡"},
+   {f:"チヌ",s:"42cm",ct:"1匹",t:"2/14 07:00",u:"エビ撒き師",m:"エビ撒き釣り",i:"🐡"},
+   {f:"チヌ",s:"38cm",ct:"2匹",t:"2/14 13:00",u:"コーン使い",m:"フカセ釣り",i:"🐡"},
+   {f:"ハネ(シーバス)",s:"52cm",ct:"2匹",t:"2/14 06:15",u:"朝イチ釣り師",m:"エビ撒き",i:"🎣"},
+   {f:"ハネ(シーバス)",s:"48cm",ct:"3匹",t:"2/13 06:30",u:"ハネ師A",m:"エビ撒き",i:"🎣"},
+   {f:"チヌ",s:"40cm",ct:"1匹",t:"2/13 09:00",u:"紀州釣り名人",m:"紀州釣り",i:"🐡"},
+   {f:"チヌ",s:"48cm",ct:"1匹",t:"2/13 07:30",u:"年無し狙い",m:"フカセ釣り",i:"🐡"},
+   {f:"セイゴ",s:"35cm",ct:"5匹",t:"2/13 17:30",u:"夕まず組",m:"エビ撒き",i:"🐟"},
+   {f:"タイ",s:"32cm",ct:"1匹",t:"2/12 10:00",u:"フカセ初心者",m:"フカセ釣り",i:"🎣"},
+   {f:"サバ",s:"25cm",ct:"15匹",t:"2/12 08:30",u:"サビキファミリー",m:"サビキ",i:"🐟"},
+   {f:"アジ",s:"18cm",ct:"20匹",t:"2/12 09:00",u:"南浜常連",m:"サビキ",i:"🐟"},
+   {f:"メバル",s:"22cm",ct:"5匹",t:"2/11 18:00",u:"メバリスト",m:"メバリング",i:"🐟"},
+   {f:"チヌ",s:"35cm",ct:"3匹",t:"2/11 07:00",u:"フカセマスター",m:"フカセ釣り",i:"🐡"},
+   {f:"サワラ",s:"68cm",ct:"1匹",t:"2/10 07:00",u:"ショアジギンガー",m:"ショアジギング",i:"🎣"},
+   {f:"チヌ",s:"44cm",ct:"2匹",t:"2/10 08:00",u:"エビ撒きベテラン",m:"エビ撒き",i:"🐡"},
+   {f:"ハネ(シーバス)",s:"55cm",ct:"1匹",t:"2/9 06:45",u:"ランカー狙い",m:"エビ撒き",i:"🎣"},
+   {f:"グレ",s:"28cm",ct:"3匹",t:"2/9 11:00",u:"磯師見習い",m:"フカセ釣り",i:"🐟"}
+  ]},
+  {n:"神戸空港ベランダ",a:"神戸",d:4.1,info:"青物・アジ好調・広い・駐車場あり・24時間",c:[
+   {f:"アジ",s:"16-20cm",ct:"35匹",t:"2/14 06:00",u:"朝マズメ常連",m:"サビキ",i:"🐟"},
+   {f:"アジ",s:"20-25cm",ct:"25匹",t:"2/13 06:30",u:"デカアジ師",m:"サビキ",i:"🐟"},
+   {f:"メバル",s:"23cm",ct:"4匹",t:"2/14 18:30",u:"メバリスト",m:"エビ撒き",i:"🐟"},
+   {f:"サバ",s:"30cm",ct:"10匹",t:"2/13 07:00",u:"青物ハンター",m:"サビキ",i:"🐟"},
+   {f:"カサゴ",s:"18cm",ct:"6匹",t:"2/13 20:00",u:"夜釣り師",m:"穴釣り",i:"🐡"},
+   {f:"サワラ",s:"72cm",ct:"1匹",t:"2/12 07:15",u:"ジグマン",m:"ショアジギング",i:"🎣"},
+   {f:"ガシラ",s:"22cm",ct:"8匹",t:"2/12 19:00",u:"根魚マニア",m:"ブラクリ",i:"🐡"},
+   {f:"アジ",s:"18cm",ct:"45匹",t:"2/11 06:15",u:"爆釣アングラー",m:"サビキ",i:"🐟"},
+   {f:"ハマチ",s:"45cm",ct:"2匹",t:"2/11 07:00",u:"青物狙い",m:"ショアジギング",i:"🎣"},
+   {f:"タチウオ",s:"85cm",ct:"3匹",t:"2/10 19:30",u:"ワインドマスター",m:"ワインド",i:"🗡️"},
+   {f:"メバル",s:"20cm",ct:"7匹",t:"2/10 18:00",u:"常夜灯ハンター",m:"メバリング",i:"🐟"},
+   {f:"カサゴ",s:"25cm",ct:"3匹",t:"2/9 21:00",u:"大物狙い",m:"落とし込み",i:"🐡"}
+  ]},
+  {n:"アジュール舞子",a:"神戸",d:6.8,info:"サビキ釣り大人気・初心者OK・トイレあり",c:[
+   {f:"アジ",s:"14-18cm",ct:"40匹",t:"2/14 09:00",u:"家族で釣り",m:"サビキ",i:"🐟"},
+   {f:"サバ",s:"25cm",ct:"15匹",t:"2/14 09:30",u:"サビキ初心者",m:"サビキ",i:"🐟"},
+   {f:"アジ",s:"16cm",ct:"30匹",t:"2/13 10:00",u:"休日アングラー",m:"サビキ",i:"🐟"},
+   {f:"イワシ",s:"12cm",ct:"50匹超",t:"2/13 11:00",u:"イワシ大量",m:"サビキ",i:"🐟"},
+   {f:"アオリイカ",s:"胴長18cm",ct:"2杯",t:"2/12 17:30",u:"エギンガー",m:"エギング",i:"🦑"},
+   {f:"ガシラ",s:"18cm",ct:"5匹",t:"2/11 15:00",u:"根魚好き",m:"胴突き",i:"🐡"},
+   {f:"メバル",s:"20cm",ct:"4匹",t:"2/10 18:30",u:"メバルハンター",m:"プラグ",i:"🐟"},
+   {f:"サヨリ",s:"28cm",ct:"12匹",t:"2/10 13:00",u:"サヨリマスター",m:"サヨリ仕掛け",i:"🐟"}
+  ]},
+  {n:"六甲アイランド",a:"神戸",d:3.5,info:"タチウオの聖地・青物・夜釣り人気エリア",c:[
+   {f:"タチウオ",s:"92cm",ct:"3匹",t:"2/14 18:30",u:"ワインド師",m:"ワインド",i:"🗡️"},
+   {f:"タチウオ",s:"85cm",ct:"5匹",t:"2/13 19:00",u:"テンヤ使い",m:"タチウオテンヤ",i:"🗡️"},
+   {f:"タチウオ",s:"78cm",ct:"2匹",t:"2/12 19:30",u:"夜勤明け釣り師",m:"ワインド",i:"🗡️"},
+   {f:"シーバス",s:"58cm",ct:"1匹",t:"2/13 20:00",u:"ルアーマン",m:"ミノー",i:"🎣"},
+   {f:"メバル",s:"22cm",ct:"6匹",t:"2/12 18:30",u:"ライトゲーマー",m:"メバリング",i:"🐟"},
+   {f:"アジ",s:"20cm",ct:"15匹",t:"2/11 17:00",u:"アジンガー",m:"アジング",i:"🐟"}
+  ]},
+  {n:"明石港",a:"明石",d:18.5,info:"タコ・メバルの名所・船釣りも人気",c:[
+   {f:"タコ",s:"520g",ct:"2匹",t:"2/14 10:00",u:"タコ釣り名人",m:"タコテンヤ",i:"🐙"},
+   {f:"タコ",s:"400g",ct:"3匹",t:"2/13 11:00",u:"タコエギ師",m:"タコエギ",i:"🐙"},
+   {f:"メバル",s:"24cm",ct:"8匹",t:"2/14 18:00",u:"メバル職人",m:"エビ撒き",i:"🐟"},
+   {f:"ガシラ",s:"26cm",ct:"5匹",t:"2/13 19:30",u:"根魚師",m:"落とし込み",i:"🐡"},
+   {f:"メバル",s:"22cm",ct:"10匹",t:"2/12 18:30",u:"常連さん",m:"メバリング",i:"🐟"},
+   {f:"カサゴ",s:"20cm",ct:"7匹",t:"2/12 20:00",u:"穴釣りマスター",m:"穴釣り",i:"🐡"},
+   {f:"チヌ",s:"40cm",ct:"1匹",t:"2/11 09:00",u:"明石チヌ師",m:"フカセ釣り",i:"🐡"},
+   {f:"タコ",s:"600g",ct:"1匹",t:"2/11 10:30",u:"地元漁師",m:"タコテンヤ",i:"🐙"},
+   {f:"アジ",s:"20cm",ct:"20匹",t:"2/10 07:00",u:"朝釣り組",m:"サビキ",i:"🐟"},
+   {f:"メバル",s:"25cm",ct:"5匹",t:"2/10 19:00",u:"尺メバル狙い",m:"プラグ",i:"🐟"}
+  ]},
+  {n:"芦屋浜",a:"尼崎",d:5.2,info:"キス・カレイ・投げ釣りの名所",c:[
+   {f:"キス",s:"22cm",ct:"8匹",t:"2/14 09:00",u:"投げ釣り師",m:"投げ釣り",i:"🐟"},
+   {f:"カレイ",s:"28cm",ct:"2匹",t:"2/13 10:30",u:"カレイ狙い",m:"投げ釣り",i:"🐟"},
+   {f:"キス",s:"18-24cm",ct:"12匹",t:"2/12 08:30",u:"キス名人",m:"投げ釣り",i:"🐟"},
+   {f:"チヌ",s:"35cm",ct:"1匹",t:"2/12 14:00",u:"エサ釣り師",m:"フカセ釣り",i:"🐡"},
+   {f:"セイゴ",s:"30cm",ct:"3匹",t:"2/11 17:30",u:"夕方散歩釣り",m:"ルアー",i:"🐟"},
+   {f:"ガシラ",s:"18cm",ct:"5匹",t:"2/11 19:00",u:"穴釣り初心者",m:"穴釣り",i:"🐡"},
+   {f:"アジ",s:"15cm",ct:"20匹",t:"2/10 08:00",u:"サビキ組",m:"サビキ",i:"🐟"}
+  ]},
+  {n:"ポートアイランド北公園",a:"神戸",d:4.5,info:"アクセス良好・夜景も綺麗・メバル好ポイント",c:[
+   {f:"メバル",s:"22cm",ct:"5匹",t:"2/14 18:30",u:"メバリスト",m:"メバリング",i:"🐟"},
+   {f:"ガシラ",s:"20cm",ct:"4匹",t:"2/13 19:00",u:"根魚ハンター",m:"ブラクリ",i:"🐡"},
+   {f:"シーバス",s:"50cm",ct:"1匹",t:"2/12 20:00",u:"シーバスアングラー",m:"ミノー",i:"🎣"},
+   {f:"アジ",s:"18cm",ct:"15匹",t:"2/11 17:30",u:"アジンガー",m:"アジング",i:"🐟"},
+   {f:"タチウオ",s:"80cm",ct:"2匹",t:"2/10 19:30",u:"ワインダー",m:"ワインド",i:"🗡️"}
+  ]},
+  {n:"林崎漁港",a:"明石",d:20,info:"メバル・アジ・穴場スポット・駐車場あり",c:[
+   {f:"メバル",s:"23cm",ct:"7匹",t:"2/14 18:00",u:"漁港メバル師",m:"エビ撒き",i:"🐟"},
+   {f:"アジ",s:"20cm",ct:"25匹",t:"2/13 06:30",u:"朝釣り常連",m:"サビキ",i:"🐟"},
+   {f:"ガシラ",s:"22cm",ct:"6匹",t:"2/13 19:30",u:"根魚大好き",m:"穴釣り",i:"🐡"},
+   {f:"チヌ",s:"38cm",ct:"1匹",t:"2/12 10:00",u:"フカセ入門者",m:"フカセ釣り",i:"🐡"},
+   {f:"タコ",s:"350g",ct:"2匹",t:"2/11 11:00",u:"タコ狙い",m:"タコエギ",i:"🐙"}
+  ]},
+  {n:"岩屋港(淡路島)",a:"淡路島",d:25,info:"淡路島の玄関口・多魚種・車必須",c:[
+   {f:"メバル",s:"25cm",ct:"8匹",t:"2/14 18:30",u:"淡路メバル師",m:"プラグ",i:"🐟"},
+   {f:"アジ",s:"22cm",ct:"30匹",t:"2/13 07:00",u:"淡路遠征組",m:"サビキ",i:"🐟"},
+   {f:"アオリイカ",s:"胴長20cm",ct:"3杯",t:"2/12 17:00",u:"エギンガー",m:"エギング",i:"🦑"},
+   {f:"チヌ",s:"42cm",ct:"2匹",t:"2/11 09:00",u:"淡路チヌ師",m:"フカセ釣り",i:"🐡"},
+   {f:"カワハギ",s:"20cm",ct:"5匹",t:"2/10 14:00",u:"カワハギ名人",m:"胴突き",i:"🐡"}
+  ]},
+  {n:"赤穂港",a:"赤穂",d:75,info:"穴場・のんびり釣り・駐車場無料",c:[
+   {f:"メバル",s:"24cm",ct:"6匹",t:"2/14 18:00",u:"赤穂釣り人",m:"メバリング",i:"🐟"},
+   {f:"ガシラ",s:"22cm",ct:"8匹",t:"2/13 19:00",u:"根魚好き",m:"穴釣り",i:"🐡"},
+   {f:"アジ",s:"20cm",ct:"20匹",t:"2/12 07:00",u:"朝活組",m:"サビキ",i:"🐟"},
+   {f:"チヌ",s:"38cm",ct:"1匹",t:"2/11 10:00",u:"フカセ師",m:"フカセ釣り",i:"🐡"}
+  ]},
+  {n:"姫路港",a:"姫路",d:80,info:"大型港・多魚種・イベントも",c:[
+   {f:"メバル",s:"22cm",ct:"5匹",t:"2/14 18:30",u:"姫路アングラー",m:"メバリング",i:"🐟"},
+   {f:"チヌ",s:"40cm",ct:"2匹",t:"2/13 09:00",u:"姫路チヌ師",m:"落とし込み",i:"🐡"},
+   {f:"アジ",s:"18cm",ct:"30匹",t:"2/12 07:00",u:"姫路サビキ師",m:"サビキ",i:"🐟"},
+   {f:"タコ",s:"450g",ct:"2匹",t:"2/11 10:00",u:"タコ師",m:"タコテンヤ",i:"🐙"}
+  ]}
+ ]
+};
+
+// Date utils
+var N=new Date(),DY=['日','月','火','水','木','金','土'];
+function fd(d){return d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日('+DY[d.getDay()]+')'}
+function sd(d){return(d.getMonth()+1)+'/'+d.getDate()+'('+DY[d.getDay()]+')'}
+var TM=new Date(N);TM.setDate(TM.getDate()+1);
+function nSat(){var d=new Date(N),dy=d.getDay(),df=dy===6?7:(6-dy);d.setDate(d.getDate()+df);return d}
+var NS=nSat(),NU=new Date(NS);NU.setDate(NU.getDate()+1);
+
+// Header
+document.getElementById('headerDate').textContent=fd(N)+' 最終更新';
+document.getElementById('todayDate').textContent=fd(N);
+document.getElementById('tideType').textContent=D.tide.type;
+document.getElementById('moonAge').textContent='🌖 '+D.tide.moon;
+document.getElementById('highTide').textContent=D.tide.high.join(' / ');
+document.getElementById('lowTide').textContent=D.tide.low.join(' / ');
+document.getElementById('amMaz').textContent=D.tide.am;
+document.getElementById('pmMaz').textContent=D.tide.pm;
+
+// Prediction cards
+function pc(rank,cls,bcls,spot,fish,sz,ct,bt,tk,td,conf,desc){
+ var cc=conf>=85?'var(--grn)':conf>=70?'var(--gold)':'var(--red)';
+ return '<div class="pc '+cls+'"><span class="badge '+bcls+'">'+rank+'</span>'
+  +'<div class="pc-name">'+spot+'</div>'
+  +'<div class="pc-desc">'+desc+'</div>'
+  +'<div class="pc-grid">'
+  +'<div class="pc-item"><div class="pc-label">🎯 狙い目</div><div class="pc-val hi">'+fish+'</div></div>'
+  +'<div class="pc-item"><div class="pc-label">📏 予想サイズ</div><div class="pc-val">'+sz+'</div></div>'
+  +'<div class="pc-item"><div class="pc-label">🐟 予想匹数</div><div class="pc-val">'+ct+'</div></div>'
+  +'<div class="pc-item"><div class="pc-label">⏰ ベストタイム</div><div class="pc-val ac">'+bt+'</div></div>'
+  +'</div>'
+  +'<div class="pc-tackle"><div class="pc-tt">🎣 '+tk+'</div><div class="pc-tx">'+td+'</div></div>'
+  +'<div class="conf"><div class="conf-bar"><div class="conf-fill" style="width:'+conf+'%;background:'+cc+'"></div></div>'
+  +'<div class="conf-txt" style="color:'+cc+'">信頼度'+conf+'%</div></div></div>';
+}
+
+// Tomorrow
+document.getElementById('tmrT').innerHTML='🏆 明日 '+sd(TM)+' のおすすめ';
+document.getElementById('tmrC').innerHTML=
+ pc('🥇 おすすめ1','g1','b1','南芦屋浜','チヌ（黒鯛）','30-48cm','2-4枚','朝まずめ 06:19-07:19',
+  'おすすめ仕掛け：フカセ / エビ撒き',
+  'オキアミ+配合エサで底トントン。ハリス1.5号、ウキ0.5号。エビ撒きならシラサエビ2杯。ハネダービー開催中でハネ狙いもアリ！',
+  92,'過去30件の実釣果ベース。2月チヌ実績多数（30-48cm）。中潮で潮通し良好。朝2時間で3-5枚の実績。')
++pc('🥈 おすすめ2','g2','b2','神戸空港ベランダ','アジ','14-25cm','25-40匹','朝まずめ 06:19-07:19',
+  'おすすめ仕掛け：サビキ仕掛け',
+  'アミコマセ+サビキ6号。デカアジ（20cm超）は下カゴサビキが有利。朝マズメに喰いがたつパターン。足元でOK。',
+  90,'直近5日連続でアジ25-45匹。朝マズメの時合いが安定。初心者・ファミリーにもおすすめ。')
++pc('🥉 おすすめ3','g3','b3','須磨海釣り公園','アジ + サバ','アジ18-25cm / サバ28-30cm','アジ30匹+サバ10匹','朝 06:30-09:00',
+  'おすすめ仕掛け：サビキ + のませ',
+  'サビキでアジ・サバ、活アジでのませ釣りも可。タイ38cmの実績あり。設備充実でファミリーに最適！',
+  88,'アジ・サバの回遊が安定。大アジ（25cm級）の実績も。のませ釣りでタイ・ハマチのチャンスも。');
+
+// Weekend
+document.getElementById('wkT').innerHTML='📅 週末 '+sd(NS)+'・'+sd(NU)+' のおすすめ';
+document.getElementById('wkC').innerHTML=
+ pc('🥇 週末おすすめ1','g1','b1','南芦屋浜','チヌ大物狙い','35-48cm','3-6枚','朝まずめ 06:15-08:00',
+  'おすすめ：フカセ釣り（じっくり半日コース）',
+  '朝イチから半日粘る。エサはオキアミ+コーンMIX。配合エサは多めに3kg。チヌ48cmの実績あり。タモ網必須、玉の柄5m推奨。',
+  88,'週末は釣り人が増えるがポイント広く十分釣れる。東護岸先端付近が狙い目。エビ撒きダービー継続中。')
++pc('🥈 週末おすすめ2','g2','b2','六甲アイランド','タチウオ','78-95cm','3-5匹','夕まずめ～夜 17:00-21:00',
+  'おすすめ：ワインド / タチウオテンヤ',
+  'ジグヘッド1/2oz+ワーム。ケミホタル必須。ワイヤーリーダー忘れずに。92cmの大型も出ているので期待大！',
+  85,'2月はタチウオシーズン終盤だがまだ十分釣れる。夕まずめの時合い安定。85cm以上の良型多数。')
++pc('🥉 週末おすすめ3','g3','b3','明石港','メバル + タコ','メバル18-26cm / タコ350-600g','メバル5-10匹 / タコ1-3匹','日中タコ→夕方メバル',
+  'おすすめ：タコテンヤ + メバリング',
+  '昼はタコテンヤで底を探る。豚の脂身が効果的。夕方からメバリングに切替。プラグ（シャッド系）好調。一日で二度おいしいプラン！',
+  82,'タコは明石が本場。メバルも冬の好ターゲット。尺メバル（30cm）の可能性も。週末ゆっくり楽しめる。');
+
+// Spots
+var ARS=[...new Set(D.spots.map(function(s){return s.a}))];
+function mkFilt(id,cb){
+ var c=document.getElementById(id);
+ c.innerHTML='<button class="af on" data-a="すべて">すべて</button>'+ARS.map(function(a){return'<button class="af" data-a="'+a+'">'+a+'</button>'}).join('');
+ c.querySelectorAll('.af').forEach(function(b){b.onclick=function(){c.querySelectorAll('.af').forEach(function(x){x.classList.remove('on')});b.classList.add('on');cb(b.dataset.a)}});
+}
+function rSpots(ar){
+ var el=document.getElementById('sList');
+ var sp=ar==='すべて'?D.spots:D.spots.filter(function(s){return s.a===ar});
+ el.innerHTML=sp.map(function(s,si){
+  var h='';
+  s.c.forEach(function(c,ci){
+   h+='<div class="catch'+(ci>=5?' hid':'')+'" data-si="'+si+'">'
+    +'<div class="catch-icon">'+c.i+'</div>'
+    +'<div class="catch-body"><div class="catch-main"><span>'+c.f+' '+c.s+' × '+c.ct+'</span></div>'
+    +'<div class="catch-sub">'+c.u+' | '+c.m+'</div></div>'
+    +'<div class="catch-time">'+c.t+'</div></div>';
+  });
+  var mb=s.c.length>5?'<button class="more-btn" onclick="tgM(this)">もっと見る（残り'+(s.c.length-5)+'件）</button>':'';
+  return'<div class="spot"><div class="spot-hdr"><div class="spot-name">'+s.n+'</div><div class="spot-cnt">釣果'+s.c.length+'件</div></div>'
+   +'<div class="spot-info">📍 '+s.d+'km｜'+s.info+'</div>'
+   +'<div class="catch-list">'+h+'</div>'+mb+'</div>';
+ }).join('');
+}
+function tgM(b){
+ var sp=b.closest('.spot'),hd=sp.querySelectorAll('.catch.hid');
+ if(hd.length){hd.forEach(function(h){h.classList.remove('hid')});b.textContent='閉じる'}
+ else{var al=sp.querySelectorAll('.catch');al.forEach(function(c,i){if(i>=5)c.classList.add('hid')});b.textContent='もっと見る（残り'+(al.length-5)+'件）'}
+}
+mkFilt('aFilt',rSpots);rSpots('すべて');
+
+// History
+function rHist(ar){
+ var el=document.getElementById('hList'),all=[];
+ var sp=ar==='すべて'?D.spots:D.spots.filter(function(s){return s.a===ar});
+ sp.forEach(function(s){s.c.forEach(function(c){all.push({f:c.f,s:c.s,ct:c.ct,t:c.t,u:c.u,m:c.m,i:c.i,sn:s.n})})});
+ all.sort(function(a,b){return b.t.localeCompare(a.t)});
+ el.innerHTML=all.slice(0,30).map(function(c){
+  return'<div class="hist-card"><div class="hist-top"><div class="hist-spot">'+c.i+' '+c.sn+'</div><div class="hist-date">'+c.t+'</div></div>'
+   +'<div class="hist-fish">'+c.f+' '+c.s+' × '+c.ct+'</div>'
+   +'<div class="hist-method">'+c.u+' | '+c.m+'</div></div>';
+ }).join('');
+}
+mkFilt('hFilt',rHist);rHist('すべて');
+
+// Tab switching
+function sw(id){
+ document.querySelectorAll('.sec').forEach(function(s){s.classList.remove('on')});
+ document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('on')});
+ document.querySelectorAll('.nav-btn').forEach(function(n){n.classList.remove('on')});
+ document.getElementById('sec-'+id).classList.add('on');
+ document.querySelectorAll('[data-sec="'+id+'"]').forEach(function(e){e.classList.add('on')});
+ window.scrollTo(0,0);
+}
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){sw(t.dataset.sec)}});
+document.querySelectorAll('.nav-btn').forEach(function(n){n.onclick=function(){sw(n.dataset.sec)}});
+</script>
+
+<div class="footer">
+ 神戸釣り情報 v6.0 ｜ データは実釣果サイト（フィッシングマックス・アングラーズ等）を元に作成<br>
+ © 2026 Kobe Fishing Info
+</div>
+</body>
+</html>
