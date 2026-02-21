@@ -8,6 +8,15 @@ on:
   
   # 手動実行も可能
   workflow_dispatch:
+on:
+  schedule:
+    - cron: '0 21 * * *'
+    - cron: '0 3 * * *'
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-fishing-data:
