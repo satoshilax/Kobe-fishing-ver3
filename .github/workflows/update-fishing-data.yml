@@ -1,15 +1,5 @@
 on:
   schedule:
-    # 毎日 朝6時、昼12時、夕方6時（日本時間）に実行
-    # GitHub Actionsは UTC時間なので -9時間
-    - cron: '0 21 * * *'  # 朝6時 JST
-    - cron: '0 3 * * *'   # 昼12時 JST
-    - cron: '0 9 * * *'   # 夕方6時 JST
-  
-  # 手動実行も可能
-  workflow_dispatch:
-on:
-  schedule:
     - cron: '0 21 * * *'
     - cron: '0 3 * * *'
     - cron: '0 9 * * *'
