@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-27T06:07:07.598412",
+  "lastUpdated": "2026-02-27T11:06:25.883418",
   "lastUpdatedDisplay": "2026年2月27日(金)",
   "spots": [
     {
@@ -42,18 +42,6 @@
           "date": "2/21",
           "emoji": "❌",
           "water_temp": "9.6℃",
-          "tide": "",
-          "weather": ""
-        },
-        {
-          "fish": "釣果なし",
-          "size": "-",
-          "count": "-",
-          "method": "",
-          "user": "",
-          "date": "2/19",
-          "emoji": "❌",
-          "water_temp": "9.7℃",
           "tide": "",
           "weather": ""
         }
@@ -196,7 +184,7 @@
       "catches": [
         {
           "fish": "アジ",
-          "size": "",
+          "size": "~53cm",
           "count": "",
           "method": "",
           "user": "",
@@ -206,7 +194,7 @@
         },
         {
           "fish": "メバル",
-          "size": "",
+          "size": "~53cm",
           "count": "",
           "method": "",
           "user": "",
@@ -259,8 +247,8 @@
     }
   },
   "stats": {
-    "totalCatches": 18,
+    "totalCatches": 17,
     "sources": 5,
-    "lastCollected": "2026-02-27 06:07"
+    "lastCollected": "2026-02-27 11:06"
   }
 }
