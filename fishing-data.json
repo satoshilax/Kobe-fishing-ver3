@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-02-28T21:40:06.039869",
-  "lastUpdatedDisplay": "2026年2月28日(土)",
+  "lastUpdated": "2026-03-01T06:03:33.852167",
+  "lastUpdatedDisplay": "2026年3月1日(日)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -42,18 +42,6 @@
           "date": "2/25",
           "emoji": "❌",
           "water_temp": "10.4℃",
-          "tide": "",
-          "weather": ""
-        },
-        {
-          "fish": "釣果なし",
-          "size": "-",
-          "count": "-",
-          "method": "",
-          "user": "",
-          "date": "2/21",
-          "emoji": "❌",
-          "water_temp": "9.6℃",
           "tide": "",
           "weather": ""
         }
@@ -200,7 +188,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "2/28",
+          "date": "3/1",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -210,7 +198,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "2/28",
+          "date": "3/1",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -220,7 +208,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "2/28",
+          "date": "3/1",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -230,7 +218,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "2/28",
+          "date": "3/1",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -246,21 +234,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年2月28日(土)",
+    "date": "2026年3月1日(日)",
     "tide": "若潮",
-    "moonAge": 11.0,
+    "moonAge": 12.0,
     "moonName": "十三夜",
     "moonIcon": "🌔",
-    "sunrise": "18:19",
-    "sunset": "29:38",
+    "sunrise": "18:18",
+    "sunset": "29:39",
     "mazume": {
-      "morning": "17:49 - 18:49",
-      "evening": "29:08 - 30:08"
+      "morning": "17:48 - 18:48",
+      "evening": "29:09 - 30:09"
     }
   },
   "stats": {
-    "totalCatches": 18,
+    "totalCatches": 17,
     "sources": 5,
-    "lastCollected": "2026-02-28 21:40"
+    "lastCollected": "2026-03-01 06:03"
   }
 }
