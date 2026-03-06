@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-05T22:01:34.343559",
-  "lastUpdatedDisplay": "2026年3月5日(木)",
+  "lastUpdated": "2026-03-06T05:37:31.440785",
+  "lastUpdatedDisplay": "2026年3月6日(金)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -30,18 +30,6 @@
           "date": "2/28",
           "emoji": "❌",
           "water_temp": "9.7℃",
-          "tide": "",
-          "weather": ""
-        },
-        {
-          "fish": "釣果なし",
-          "size": "-",
-          "count": "-",
-          "method": "",
-          "user": "",
-          "date": "2/26",
-          "emoji": "❌",
-          "water_temp": "10.1℃",
           "tide": "",
           "weather": ""
         }
@@ -188,7 +176,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/5",
+          "date": "3/6",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -198,7 +186,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/5",
+          "date": "3/6",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -208,17 +196,17 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/5",
+          "date": "3/6",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "チヌ",
+          "fish": "メバル",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/5",
+          "date": "3/6",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -234,21 +222,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年3月5日(木)",
-    "tide": "大潮",
-    "moonAge": 16.0,
-    "moonName": "満月",
-    "moonIcon": "🌕",
-    "sunrise": "18:14",
-    "sunset": "29:44",
+    "date": "2026年3月6日(金)",
+    "tide": "中潮",
+    "moonAge": 17.0,
+    "moonName": "十八夜",
+    "moonIcon": "🌖",
+    "sunrise": "18:13",
+    "sunset": "29:45",
     "mazume": {
-      "morning": "17:44 - 18:44",
-      "evening": "29:14 - 30:14"
+      "morning": "17:43 - 18:43",
+      "evening": "29:15 - 30:15"
     }
   },
   "stats": {
-    "totalCatches": 17,
+    "totalCatches": 16,
     "sources": 5,
-    "lastCollected": "2026-03-05 22:01"
+    "lastCollected": "2026-03-06 05:37"
   }
 }
