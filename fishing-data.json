@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-07T21:39:44.947162",
-  "lastUpdatedDisplay": "2026年3月7日(土)",
+  "lastUpdated": "2026-03-08T05:34:22.015025",
+  "lastUpdatedDisplay": "2026年3月8日(日)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -18,18 +18,6 @@
           "date": "3/4",
           "emoji": "❌",
           "water_temp": "10.1℃",
-          "tide": "",
-          "weather": ""
-        },
-        {
-          "fish": "釣果なし",
-          "size": "-",
-          "count": "-",
-          "method": "",
-          "user": "",
-          "date": "2/28",
-          "emoji": "❌",
-          "water_temp": "9.7℃",
           "tide": "",
           "weather": ""
         }
@@ -129,6 +117,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "メバルプラッキング🎣",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "メバルプラッキング🎣",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "昨日ボウズからのリベンジ釣行🎣",
           "size": "",
           "count": "",
@@ -149,17 +148,6 @@
           "emoji": "🐟",
           "description": "狙っての今季初メバル🐟️",
           "area_detail": "神戸西部"
-        },
-        {
-          "fish": "初釣",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸西部"
         }
       ]
     },
@@ -172,7 +160,7 @@
       "catches": [
         {
           "fish": "アジ",
-          "size": "~72cm",
+          "size": "~30cm",
           "count": "",
           "method": "",
           "user": "",
@@ -182,7 +170,7 @@
         },
         {
           "fish": "メバル",
-          "size": "~72cm",
+          "size": "~30cm",
           "count": "",
           "method": "",
           "user": "",
@@ -222,21 +210,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年3月7日(土)",
+    "date": "2026年3月8日(日)",
     "tide": "中潮",
-    "moonAge": 18.0,
+    "moonAge": 19.0,
     "moonName": "十八夜",
     "moonIcon": "🌖",
-    "sunrise": "18:12",
-    "sunset": "29:46",
+    "sunrise": "18:10",
+    "sunset": "29:47",
     "mazume": {
-      "morning": "17:42 - 18:42",
-      "evening": "29:16 - 30:16"
+      "morning": "17:40 - 18:40",
+      "evening": "29:17 - 30:17"
     }
   },
   "stats": {
-    "totalCatches": 16,
+    "totalCatches": 15,
     "sources": 5,
-    "lastCollected": "2026-03-07 21:39"
+    "lastCollected": "2026-03-08 05:34"
   }
 }
