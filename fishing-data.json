@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-08T21:44:15.184809",
-  "lastUpdatedDisplay": "2026年3月8日(日)",
+  "lastUpdated": "2026-03-09T06:13:17.226805",
+  "lastUpdatedDisplay": "2026年3月9日(月)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -117,6 +117,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "絶滅危惧種",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "メバルプラッキング🎣",
           "size": "",
           "count": "",
@@ -136,17 +147,6 @@
           "date": "",
           "emoji": "🐟",
           "description": "昨日ボウズからのリベンジ釣行🎣",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "狙っての今季初メバル🐟️",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "狙っての今季初メバル🐟️",
           "area_detail": "神戸西部"
         }
       ]
@@ -184,7 +184,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/8",
+          "date": "3/9",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -194,7 +194,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/8",
+          "date": "3/9",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -210,21 +210,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年3月8日(日)",
+    "date": "2026年3月9日(月)",
     "tide": "中潮",
-    "moonAge": 19.0,
+    "moonAge": 20.0,
     "moonName": "十八夜",
     "moonIcon": "🌖",
-    "sunrise": "18:10",
-    "sunset": "29:47",
+    "sunrise": "18:09",
+    "sunset": "29:48",
     "mazume": {
-      "morning": "17:40 - 18:40",
-      "evening": "29:17 - 30:17"
+      "morning": "17:39 - 18:39",
+      "evening": "29:18 - 30:18"
     }
   },
   "stats": {
     "totalCatches": 15,
     "sources": 5,
-    "lastCollected": "2026-03-08 21:44"
+    "lastCollected": "2026-03-09 06:13"
   }
 }
