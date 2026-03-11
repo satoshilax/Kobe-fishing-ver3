@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-11T04:28:38.665194",
+  "lastUpdated": "2026-03-11T09:52:08.721511",
   "lastUpdatedDisplay": "2026年3月11日(水)",
   "spots": [
     {
@@ -117,6 +117,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "釣りはじめ。初舌平目",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "釣りはじめ。初舌平目",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "絶滅危惧種",
           "size": "",
           "count": "",
@@ -136,17 +147,6 @@
           "date": "",
           "emoji": "🐟",
           "description": "メバルプラッキング🎣",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "昨日ボウズからのリベンジ釣行🎣",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "昨日ボウズからのリベンジ釣行🎣",
           "area_detail": "神戸西部"
         }
       ]
@@ -225,6 +225,6 @@
   "stats": {
     "totalCatches": 15,
     "sources": 5,
-    "lastCollected": "2026-03-11 04:28"
+    "lastCollected": "2026-03-11 09:52"
   }
 }
