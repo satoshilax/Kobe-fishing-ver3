@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-13T09:48:19.132559",
+  "lastUpdated": "2026-03-13T21:24:15.135890",
   "lastUpdatedDisplay": "2026年3月13日(金)",
   "spots": [
     {
@@ -171,17 +171,17 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/13",
+          "date": "3/14",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "チヌ",
+          "fish": "メバル",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/13",
+          "date": "3/14",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -212,6 +212,6 @@
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-03-13 09:48"
+    "lastCollected": "2026-03-13 21:24"
   }
 }
