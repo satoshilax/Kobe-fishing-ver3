@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-13T21:24:15.135890",
-  "lastUpdatedDisplay": "2026年3月13日(金)",
+  "lastUpdated": "2026-03-14T04:28:49.818062",
+  "lastUpdatedDisplay": "2026年3月14日(土)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -8,7 +8,20 @@
       "distance": 2.3,
       "info": "ファミリー向け・足場良好・設備充実・駐車場あり",
       "source": "sumasakana-park.com",
-      "catches": []
+      "catches": [
+        {
+          "fish": "釣果なし",
+          "size": "-",
+          "count": "-",
+          "method": "",
+          "user": "",
+          "date": "3/14",
+          "emoji": "❌",
+          "water_temp": "10.6℃",
+          "tide": "",
+          "weather": ""
+        }
+      ]
     },
     {
       "name": "平磯海づり公園",
@@ -151,7 +164,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/13",
+          "date": "3/14",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -161,7 +174,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/13",
+          "date": "3/14",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -197,21 +210,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年3月13日(金)",
-    "tide": "長潮",
-    "moonAge": 24.0,
+    "date": "2026年3月14日(土)",
+    "tide": "若潮",
+    "moonAge": 25.0,
     "moonName": "二十六夜",
     "moonIcon": "🌘",
-    "sunrise": "18:05",
-    "sunset": "29:52",
+    "sunrise": "18:04",
+    "sunset": "29:54",
     "mazume": {
-      "morning": "17:35 - 18:35",
-      "evening": "29:22 - 30:22"
+      "morning": "17:34 - 18:34",
+      "evening": "29:24 - 30:24"
     }
   },
   "stats": {
-    "totalCatches": 14,
+    "totalCatches": 15,
     "sources": 5,
-    "lastCollected": "2026-03-13 21:24"
+    "lastCollected": "2026-03-14 04:28"
   }
 }
