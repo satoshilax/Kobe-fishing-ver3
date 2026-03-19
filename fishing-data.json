@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-19T09:53:53.011852",
+  "lastUpdated": "2026-03-19T21:25:51.275157",
   "lastUpdatedDisplay": "2026年3月19日(木)",
   "spots": [
     {
@@ -160,21 +160,21 @@
       "catches": [
         {
           "fish": "メバル",
-          "size": "~74cm",
+          "size": "~25cm",
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/19",
+          "date": "3/20",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
           "fish": "チヌ",
-          "size": "~74cm",
+          "size": "~25cm",
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/19",
+          "date": "3/20",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -225,6 +225,6 @@
   "stats": {
     "totalCatches": 15,
     "sources": 5,
-    "lastCollected": "2026-03-19 09:53"
+    "lastCollected": "2026-03-19 21:25"
   }
 }
