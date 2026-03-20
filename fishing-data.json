@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-19T21:25:51.275157",
-  "lastUpdatedDisplay": "2026年3月19日(木)",
+  "lastUpdated": "2026-03-20T04:43:17.656511",
+  "lastUpdatedDisplay": "2026年3月20日(金)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -160,7 +160,7 @@
       "catches": [
         {
           "fish": "メバル",
-          "size": "~25cm",
+          "size": "~29.2cm",
           "count": "",
           "method": "",
           "user": "",
@@ -170,7 +170,7 @@
         },
         {
           "fish": "チヌ",
-          "size": "~25cm",
+          "size": "~29.2cm",
           "count": "",
           "method": "",
           "user": "",
@@ -184,7 +184,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/19",
+          "date": "3/20",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -194,7 +194,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/19",
+          "date": "3/20",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -210,21 +210,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年3月19日(木)",
+    "date": "2026年3月20日(金)",
     "tide": "大潮",
-    "moonAge": 0.5,
+    "moonAge": 1.5,
     "moonName": "新月",
     "moonIcon": "🌑",
-    "sunrise": "17:58",
-    "sunset": "29:59",
+    "sunrise": "17:57",
+    "sunset": "30:00",
     "mazume": {
-      "morning": "17:28 - 18:28",
-      "evening": "29:29 - 30:29"
+      "morning": "17:27 - 18:27",
+      "evening": "29:30 - 30:30"
     }
   },
   "stats": {
     "totalCatches": 15,
     "sources": 5,
-    "lastCollected": "2026-03-19 21:25"
+    "lastCollected": "2026-03-20 04:43"
   }
 }
