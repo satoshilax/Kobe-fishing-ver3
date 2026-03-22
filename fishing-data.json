@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-21T21:15:33.163679",
-  "lastUpdatedDisplay": "2026年3月21日(土)",
+  "lastUpdated": "2026-03-22T04:48:43.116986",
+  "lastUpdatedDisplay": "2026年3月22日(日)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -8,20 +8,7 @@
       "distance": 2.3,
       "info": "ファミリー向け・足場良好・設備充実・駐車場あり",
       "source": "sumasakana-park.com",
-      "catches": [
-        {
-          "fish": "釣果なし",
-          "size": "-",
-          "count": "-",
-          "method": "",
-          "user": "",
-          "date": "3/14",
-          "emoji": "❌",
-          "water_temp": "10.6℃",
-          "tide": "",
-          "weather": ""
-        }
-      ]
+      "catches": []
     },
     {
       "name": "平磯海づり公園",
@@ -117,6 +104,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "のんびりメバル狙い",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "フロートメバリング",
           "size": "",
           "count": "",
@@ -136,17 +134,6 @@
           "date": "",
           "emoji": "🐟",
           "description": "釣りはじめ。初舌平目",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "絶滅危惧種",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
           "area_detail": "神戸西部"
         }
       ]
@@ -184,7 +171,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/21",
+          "date": "3/22",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -194,7 +181,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "3/21",
+          "date": "3/22",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -210,21 +197,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年3月21日(土)",
-    "tide": "若潮",
-    "moonAge": 2.5,
+    "date": "2026年3月22日(日)",
+    "tide": "中潮",
+    "moonAge": 3.5,
     "moonName": "三日月",
     "moonIcon": "🌒",
-    "sunrise": "17:56",
-    "sunset": "30:01",
+    "sunrise": "17:55",
+    "sunset": "30:03",
     "mazume": {
-      "morning": "17:26 - 18:26",
-      "evening": "29:31 - 30:31"
+      "morning": "17:25 - 18:25",
+      "evening": "29:33 - 30:33"
     }
   },
   "stats": {
-    "totalCatches": 15,
+    "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-03-21 21:15"
+    "lastCollected": "2026-03-22 04:48"
   }
 }
