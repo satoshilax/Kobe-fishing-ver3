@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-30T10:22:17.043869",
+  "lastUpdated": "2026-03-30T21:33:19.290230",
   "lastUpdatedDisplay": "2026年3月30日(月)",
   "spots": [
     {
@@ -169,7 +169,7 @@
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
-          "fish": "メバル",
+          "fish": "サバ",
           "size": "~36cm",
           "count": "",
           "method": "",
@@ -225,6 +225,6 @@
   "stats": {
     "totalCatches": 15,
     "sources": 5,
-    "lastCollected": "2026-03-30 10:22"
+    "lastCollected": "2026-03-30 21:33"
   }
 }
