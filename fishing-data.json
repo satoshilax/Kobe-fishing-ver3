@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-04T21:22:11.966117",
-  "lastUpdatedDisplay": "2026年4月4日(土)",
+  "lastUpdated": "2026-04-05T05:07:28.256701",
+  "lastUpdatedDisplay": "2026年4月5日(日)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -117,6 +117,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "ガシラ開幕",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "のんびりメバル狙い",
           "size": "",
           "count": "",
@@ -137,17 +148,6 @@
           "emoji": "🐟",
           "description": "",
           "area_detail": "神戸西部"
-        },
-        {
-          "fish": "釣りはじめ。初舌平目",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "釣りはじめ。初舌平目",
-          "area_detail": "神戸西部"
         }
       ]
     },
@@ -164,7 +164,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "4/4",
+          "date": "4/5",
           "emoji": "🐠",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -174,7 +174,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "4/4",
+          "date": "4/5",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -184,7 +184,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "4/4",
+          "date": "4/5",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -194,7 +194,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "4/4",
+          "date": "4/5",
           "emoji": "🦑",
           "description": "垂水店の釣果情報一覧"
         }
@@ -210,21 +210,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年4月4日(土)",
-    "tide": "大潮",
-    "moonAge": 16.5,
-    "moonName": "満月",
-    "moonIcon": "🌕",
-    "sunrise": "17:40",
-    "sunset": "30:17",
+    "date": "2026年4月5日(日)",
+    "tide": "中潮",
+    "moonAge": 17.5,
+    "moonName": "十八夜",
+    "moonIcon": "🌖",
+    "sunrise": "17:39",
+    "sunset": "30:18",
     "mazume": {
-      "morning": "17:10 - 18:10",
-      "evening": "29:47 - 30:47"
+      "morning": "17:09 - 18:09",
+      "evening": "29:48 - 30:48"
     }
   },
   "stats": {
     "totalCatches": 15,
     "sources": 5,
-    "lastCollected": "2026-04-04 21:22"
+    "lastCollected": "2026-04-05 05:07"
   }
 }
