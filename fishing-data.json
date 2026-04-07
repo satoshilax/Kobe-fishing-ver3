@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-07T05:04:40.798456",
+  "lastUpdated": "2026-04-07T10:11:52.004795",
   "lastUpdatedDisplay": "2026年4月7日(火)",
   "spots": [
     {
@@ -189,13 +189,13 @@
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "イカ",
+          "fish": "チヌ",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
           "date": "4/7",
-          "emoji": "🦑",
+          "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
       ]
@@ -225,6 +225,6 @@
   "stats": {
     "totalCatches": 15,
     "sources": 5,
-    "lastCollected": "2026-04-07 05:04"
+    "lastCollected": "2026-04-07 10:11"
   }
 }
