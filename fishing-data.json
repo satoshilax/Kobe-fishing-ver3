@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-06T21:28:57.016643",
-  "lastUpdatedDisplay": "2026年4月6日(月)",
+  "lastUpdated": "2026-04-07T05:04:40.798456",
+  "lastUpdatedDisplay": "2026年4月7日(火)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -117,6 +117,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "花見カレイ失敗。ポカポカの日",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "花見カレイ失敗。ポカポカの日",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "ガシラ開幕",
           "size": "",
           "count": "",
@@ -137,17 +148,6 @@
           "emoji": "🐟",
           "description": "",
           "area_detail": "神戸西部"
-        },
-        {
-          "fish": "フロートメバリング",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸西部"
         }
       ]
     },
@@ -160,7 +160,7 @@
       "catches": [
         {
           "fish": "アジ",
-          "size": "~76cm",
+          "size": "~26.5cm",
           "count": "",
           "method": "",
           "user": "",
@@ -170,7 +170,7 @@
         },
         {
           "fish": "サバ",
-          "size": "~76cm",
+          "size": "~26.5cm",
           "count": "",
           "method": "",
           "user": "",
@@ -210,21 +210,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年4月6日(月)",
+    "date": "2026年4月7日(火)",
     "tide": "中潮",
-    "moonAge": 18.5,
+    "moonAge": 19.5,
     "moonName": "十八夜",
     "moonIcon": "🌖",
-    "sunrise": "17:38",
-    "sunset": "30:19",
+    "sunrise": "17:37",
+    "sunset": "30:20",
     "mazume": {
-      "morning": "17:08 - 18:08",
-      "evening": "29:49 - 30:49"
+      "morning": "17:07 - 18:07",
+      "evening": "29:50 - 30:50"
     }
   },
   "stats": {
     "totalCatches": 15,
     "sources": 5,
-    "lastCollected": "2026-04-06 21:28"
+    "lastCollected": "2026-04-07 05:04"
   }
 }
