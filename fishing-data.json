@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-08T10:13:02.830061",
+  "lastUpdated": "2026-04-08T21:34:08.997770",
   "lastUpdatedDisplay": "2026年4月8日(水)",
   "spots": [
     {
@@ -160,7 +160,7 @@
       "catches": [
         {
           "fish": "アジ",
-          "size": "~26.5cm",
+          "size": "~36cm",
           "count": "",
           "method": "",
           "user": "",
@@ -170,7 +170,7 @@
         },
         {
           "fish": "サバ",
-          "size": "~26.5cm",
+          "size": "~36cm",
           "count": "",
           "method": "",
           "user": "",
@@ -189,7 +189,7 @@
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "チヌ",
+          "fish": "メバル",
           "size": "",
           "count": "",
           "method": "",
@@ -225,6 +225,6 @@
   "stats": {
     "totalCatches": 15,
     "sources": 5,
-    "lastCollected": "2026-04-08 10:13"
+    "lastCollected": "2026-04-08 21:34"
   }
 }
