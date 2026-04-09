@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-09T05:04:58.583702",
+  "lastUpdated": "2026-04-09T10:17:39.259360",
   "lastUpdatedDisplay": "2026年4月9日(木)",
   "spots": [
     {
@@ -8,20 +8,7 @@
       "distance": 2.3,
       "info": "ファミリー向け・足場良好・設備充実・駐車場あり",
       "source": "sumasakana-park.com",
-      "catches": [
-        {
-          "fish": "釣果なし",
-          "size": "-",
-          "count": "-",
-          "method": "",
-          "user": "",
-          "date": "4/1",
-          "emoji": "❌",
-          "water_temp": "12.4℃",
-          "tide": "",
-          "weather": ""
-        }
-      ]
+      "catches": []
     },
     {
       "name": "平磯海づり公園",
@@ -223,8 +210,8 @@
     }
   },
   "stats": {
-    "totalCatches": 15,
+    "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-04-09 05:04"
+    "lastCollected": "2026-04-09 10:17"
   }
 }
