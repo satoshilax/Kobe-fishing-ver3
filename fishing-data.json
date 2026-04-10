@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-09T21:38:28.514475",
-  "lastUpdatedDisplay": "2026年4月9日(木)",
+  "lastUpdated": "2026-04-10T05:19:46.667442",
+  "lastUpdatedDisplay": "2026年4月10日(金)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -8,7 +8,20 @@
       "distance": 2.3,
       "info": "ファミリー向け・足場良好・設備充実・駐車場あり",
       "source": "sumasakana-park.com",
-      "catches": []
+      "catches": [
+        {
+          "fish": "釣果なし",
+          "size": "-",
+          "count": "-",
+          "method": "",
+          "user": "",
+          "date": "4/10",
+          "emoji": "❌",
+          "water_temp": "14.0℃",
+          "tide": "",
+          "weather": ""
+        }
+      ]
     },
     {
       "name": "平磯海づり公園",
@@ -197,21 +210,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年4月9日(木)",
+    "date": "2026年4月10日(金)",
     "tide": "小潮",
-    "moonAge": 21.5,
+    "moonAge": 22.5,
     "moonName": "下弦の月",
     "moonIcon": "🌗",
-    "sunrise": "17:35",
-    "sunset": "30:22",
+    "sunrise": "17:34",
+    "sunset": "30:24",
     "mazume": {
-      "morning": "17:05 - 18:05",
-      "evening": "29:52 - 30:52"
+      "morning": "17:04 - 18:04",
+      "evening": "29:54 - 30:54"
     }
   },
   "stats": {
-    "totalCatches": 14,
+    "totalCatches": 15,
     "sources": 5,
-    "lastCollected": "2026-04-09 21:38"
+    "lastCollected": "2026-04-10 05:19"
   }
 }
