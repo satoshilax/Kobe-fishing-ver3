@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-14T05:17:20.639120",
+  "lastUpdated": "2026-04-14T10:20:06.927982",
   "lastUpdatedDisplay": "2026年4月14日(火)",
   "spots": [
     {
@@ -84,6 +84,17 @@
       "source": "fishing.ne.jp",
       "catches": [
         {
+          "fish": "ショアジギ準備",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐠",
+          "description": "",
+          "area_detail": "神戸東部"
+        },
+        {
           "fish": "ショアジギング　6",
           "size": "",
           "count": "",
@@ -96,17 +107,6 @@
         },
         {
           "fish": "ショアジギング　5",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐠",
-          "description": "",
-          "area_detail": "神戸東部"
-        },
-        {
-          "fish": "ショアジギング　4",
           "size": "",
           "count": "",
           "method": "",
@@ -225,6 +225,6 @@
   "stats": {
     "totalCatches": 15,
     "sources": 5,
-    "lastCollected": "2026-04-14 05:17"
+    "lastCollected": "2026-04-14 10:20"
   }
 }
