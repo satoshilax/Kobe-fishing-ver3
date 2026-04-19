@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-18T21:24:35.751244",
-  "lastUpdatedDisplay": "2026年4月18日(土)",
+  "lastUpdated": "2026-04-19T05:22:44.549723",
+  "lastUpdatedDisplay": "2026年4月19日(日)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -115,6 +115,17 @@
           "area_detail": "神戸西部"
         },
         {
+          "fish": "メバリング",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "花見カレイ前線2輪咲",
           "size": "",
           "count": "",
@@ -123,17 +134,6 @@
           "date": "",
           "emoji": "🐟",
           "description": "花見カレイ前線2輪咲",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "コブダイ釣り",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
           "area_detail": "神戸西部"
         }
       ]
@@ -147,7 +147,7 @@
       "catches": [
         {
           "fish": "アジ",
-          "size": "~18cm",
+          "size": "~26cm",
           "count": "",
           "method": "",
           "user": "",
@@ -157,7 +157,7 @@
         },
         {
           "fish": "サバ",
-          "size": "~18cm",
+          "size": "~26cm",
           "count": "",
           "method": "",
           "user": "",
@@ -171,7 +171,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "4/18",
+          "date": "4/19",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -181,7 +181,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "4/18",
+          "date": "4/19",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -197,21 +197,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年4月18日(土)",
+    "date": "2026年4月19日(日)",
     "tide": "大潮",
-    "moonAge": 1.0,
-    "moonName": "新月",
-    "moonIcon": "🌑",
-    "sunrise": "17:25",
-    "sunset": "30:32",
+    "moonAge": 2.0,
+    "moonName": "三日月",
+    "moonIcon": "🌒",
+    "sunrise": "17:24",
+    "sunset": "30:33",
     "mazume": {
-      "morning": "16:55 - 17:55",
-      "evening": "30:02 - 31:02"
+      "morning": "16:54 - 17:54",
+      "evening": "30:03 - 31:03"
     }
   },
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-04-18 21:24"
+    "lastCollected": "2026-04-19 05:22"
   }
 }
