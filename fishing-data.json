@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-21T21:37:17.037696",
-  "lastUpdatedDisplay": "2026年4月21日(火)",
+  "lastUpdated": "2026-04-22T05:19:26.027049",
+  "lastUpdatedDisplay": "2026年4月22日(水)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -104,7 +104,7 @@
           "area_detail": "神戸東部"
         },
         {
-          "fish": "メバリング",
+          "fish": "メバルプラッギング",
           "size": "",
           "count": "",
           "method": "",
@@ -171,7 +171,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "4/21",
+          "date": "4/22",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -181,7 +181,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "4/21",
+          "date": "4/22",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -197,21 +197,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年4月21日(火)",
+    "date": "2026年4月22日(水)",
     "tide": "中潮",
-    "moonAge": 4.0,
+    "moonAge": 5.0,
     "moonName": "三日月",
     "moonIcon": "🌒",
-    "sunrise": "17:22",
-    "sunset": "30:35",
+    "sunrise": "17:21",
+    "sunset": "30:36",
     "mazume": {
-      "morning": "16:52 - 17:52",
-      "evening": "30:05 - 31:05"
+      "morning": "16:51 - 17:51",
+      "evening": "30:06 - 31:06"
     }
   },
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-04-21 21:37"
+    "lastCollected": "2026-04-22 05:19"
   }
 }
