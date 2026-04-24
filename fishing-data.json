@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-24T05:28:54.616491",
+  "lastUpdated": "2026-04-24T10:26:40.826433",
   "lastUpdatedDisplay": "2026年4月24日(金)",
   "spots": [
     {
@@ -147,21 +147,21 @@
       "catches": [
         {
           "fish": "アジ",
-          "size": "~30cm",
+          "size": "",
           "count": "",
           "method": "",
           "user": "",
-          "date": "4/23",
+          "date": "4/24",
           "emoji": "🐠",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
           "fish": "サバ",
-          "size": "~30cm",
+          "size": "",
           "count": "",
           "method": "",
           "user": "",
-          "date": "4/23",
+          "date": "4/24",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -212,6 +212,6 @@
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-04-24 05:28"
+    "lastCollected": "2026-04-24 10:26"
   }
 }
