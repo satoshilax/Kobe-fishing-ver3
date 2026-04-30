@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-29T21:51:33.721006",
-  "lastUpdatedDisplay": "2026年4月29日(水)",
+  "lastUpdated": "2026-04-30T05:52:24.204663",
+  "lastUpdatedDisplay": "2026年4月30日(木)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -104,6 +104,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "自己新記録",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "アジング",
           "size": "",
           "count": "",
@@ -116,17 +127,6 @@
         },
         {
           "fish": "久しぶりの須磨",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "メバルプラッギング",
           "size": "",
           "count": "",
           "method": "",
@@ -171,7 +171,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "4/29",
+          "date": "4/30",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -181,7 +181,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "4/29",
+          "date": "4/30",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -197,21 +197,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年4月29日(水)",
+    "date": "2026年4月30日(木)",
     "tide": "若潮",
-    "moonAge": 12.0,
-    "moonName": "十三夜",
-    "moonIcon": "🌔",
-    "sunrise": "17:14",
-    "sunset": "30:43",
+    "moonAge": 13.0,
+    "moonName": "満月",
+    "moonIcon": "🌕",
+    "sunrise": "17:13",
+    "sunset": "30:44",
     "mazume": {
-      "morning": "16:44 - 17:44",
-      "evening": "30:13 - 31:13"
+      "morning": "16:43 - 17:43",
+      "evening": "30:14 - 31:14"
     }
   },
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-04-29 21:51"
+    "lastCollected": "2026-04-30 05:52"
   }
 }
