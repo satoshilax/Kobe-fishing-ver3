@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-07T21:45:18.313221",
-  "lastUpdatedDisplay": "2026年5月7日(木)",
+  "lastUpdated": "2026-05-08T05:25:24.084611",
+  "lastUpdatedDisplay": "2026年5月8日(金)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -171,7 +171,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "5/7",
+          "date": "5/8",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -181,7 +181,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "5/7",
+          "date": "5/8",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -197,21 +197,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年5月7日(木)",
+    "date": "2026年5月8日(金)",
     "tide": "中潮",
-    "moonAge": 20.0,
-    "moonName": "十八夜",
-    "moonIcon": "🌖",
-    "sunrise": "17:07",
-    "sunset": "30:51",
+    "moonAge": 21.0,
+    "moonName": "下弦の月",
+    "moonIcon": "🌗",
+    "sunrise": "17:06",
+    "sunset": "30:52",
     "mazume": {
-      "morning": "16:37 - 17:37",
-      "evening": "30:21 - 31:21"
+      "morning": "16:36 - 17:36",
+      "evening": "30:22 - 31:22"
     }
   },
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-05-07 21:45"
+    "lastCollected": "2026-05-08 05:25"
   }
 }
