@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-09T05:42:56.520127",
+  "lastUpdated": "2026-05-09T10:11:37.278907",
   "lastUpdatedDisplay": "2026年5月9日(土)",
   "spots": [
     {
@@ -156,13 +156,13 @@
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
-          "fish": "サバ",
+          "fish": "タコ",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
           "date": "5/9",
-          "emoji": "🐟",
+          "emoji": "🐙",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
@@ -212,6 +212,6 @@
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-05-09 05:42"
+    "lastCollected": "2026-05-09 10:11"
   }
 }
