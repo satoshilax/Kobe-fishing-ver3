@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-23T06:08:33.183767",
+  "lastUpdated": "2026-05-23T10:39:38.266584",
   "lastUpdatedDisplay": "2026年5月23日(土)",
   "spots": [
     {
@@ -104,6 +104,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "コブダイ釣り",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "コウイカ発見②",
           "size": "",
           "count": "",
@@ -116,17 +127,6 @@
         },
         {
           "fish": "今年初大サバ",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "新ポイント再検証🎣",
           "size": "",
           "count": "",
           "method": "",
@@ -212,6 +212,6 @@
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-05-23 06:08"
+    "lastCollected": "2026-05-23 10:39"
   }
 }
