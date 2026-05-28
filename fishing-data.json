@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-27T22:24:45.940062",
-  "lastUpdatedDisplay": "2026年5月27日(水)",
+  "lastUpdated": "2026-05-28T06:47:34.266233",
+  "lastUpdatedDisplay": "2026年5月28日(木)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -104,6 +104,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "サビキのシーズン到来①",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "サビキのシーズン到来①",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "豆アジ調査",
           "size": "",
           "count": "",
@@ -122,17 +133,6 @@
           "user": "",
           "date": "",
           "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "コウイカ発見②",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🦑",
           "description": "",
           "area_detail": "神戸西部"
         }
@@ -176,7 +176,7 @@
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "メバル",
+          "fish": "サバ",
           "size": "",
           "count": "",
           "method": "",
@@ -197,21 +197,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年5月27日(水)",
-    "tide": "長潮",
-    "moonAge": 10.4,
+    "date": "2026年5月28日(木)",
+    "tide": "若潮",
+    "moonAge": 11.4,
     "moonName": "十三夜",
     "moonIcon": "🌔",
-    "sunrise": "16:52",
+    "sunrise": "16:51",
     "sunset": "31:06",
     "mazume": {
-      "morning": "16:22 - 17:22",
+      "morning": "16:21 - 17:21",
       "evening": "30:36 - 31:36"
     }
   },
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-05-27 22:24"
+    "lastCollected": "2026-05-28 06:47"
   }
 }
