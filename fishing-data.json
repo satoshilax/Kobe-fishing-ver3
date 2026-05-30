@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-30T06:18:35.773658",
+  "lastUpdated": "2026-05-30T10:49:31.097475",
   "lastUpdatedDisplay": "2026年5月30日(土)",
   "spots": [
     {
@@ -176,7 +176,7 @@
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "チヌ",
+          "fish": "サバ",
           "size": "",
           "count": "",
           "method": "",
@@ -212,6 +212,6 @@
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-05-30 06:18"
+    "lastCollected": "2026-05-30 10:49"
   }
 }
