@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-30T21:50:33.402786",
-  "lastUpdatedDisplay": "2026年5月30日(土)",
+  "lastUpdated": "2026-05-31T06:54:16.344567",
+  "lastUpdatedDisplay": "2026年5月31日(日)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -104,6 +104,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "大サバ調査",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "サビキ株価値下がり中",
           "size": "",
           "count": "",
@@ -124,17 +135,6 @@
           "emoji": "🐟",
           "description": "サビキのシーズン到来①",
           "area_detail": "神戸西部"
-        },
-        {
-          "fish": "豆アジ調査",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐠",
-          "description": "",
-          "area_detail": "神戸西部"
         }
       ]
     },
@@ -147,7 +147,7 @@
       "catches": [
         {
           "fish": "アジ",
-          "size": "",
+          "size": "~67cm",
           "count": "",
           "method": "",
           "user": "",
@@ -156,32 +156,32 @@
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
-          "fish": "タコ",
-          "size": "",
+          "fish": "サバ",
+          "size": "~67cm",
           "count": "",
           "method": "",
           "user": "",
           "date": "5/31",
-          "emoji": "🐙",
+          "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
           "fish": "アジ",
-          "size": "",
+          "size": "~33.8cm",
           "count": "",
           "method": "",
           "user": "",
-          "date": "5/30",
+          "date": "5/31",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
         {
           "fish": "サバ",
-          "size": "",
+          "size": "~33.8cm",
           "count": "",
           "method": "",
           "user": "",
-          "date": "5/30",
+          "date": "5/31",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -197,21 +197,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年5月30日(土)",
-    "tide": "若潮",
-    "moonAge": 13.4,
+    "date": "2026年5月31日(日)",
+    "tide": "大潮",
+    "moonAge": 14.4,
     "moonName": "満月",
     "moonIcon": "🌕",
     "sunrise": "16:50",
-    "sunset": "31:07",
+    "sunset": "31:08",
     "mazume": {
       "morning": "16:20 - 17:20",
-      "evening": "30:37 - 31:37"
+      "evening": "30:38 - 31:38"
     }
   },
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-05-30 21:50"
+    "lastCollected": "2026-05-31 06:54"
   }
 }
