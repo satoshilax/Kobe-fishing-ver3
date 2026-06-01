@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-31T21:47:52.893837",
-  "lastUpdatedDisplay": "2026年5月31日(日)",
+  "lastUpdated": "2026-06-01T08:28:36.400179",
+  "lastUpdatedDisplay": "2026年6月1日(月)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -104,6 +104,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "サビキ株価下落中②",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "大サバ調査",
           "size": "",
           "count": "",
@@ -124,17 +135,6 @@
           "emoji": "🐟",
           "description": "サビキ株価値下がり中",
           "area_detail": "神戸西部"
-        },
-        {
-          "fish": "サビキのシーズン到来①",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "サビキのシーズン到来①",
-          "area_detail": "神戸西部"
         }
       ]
     },
@@ -147,7 +147,7 @@
       "catches": [
         {
           "fish": "アジ",
-          "size": "~39cm",
+          "size": "",
           "count": "",
           "method": "",
           "user": "",
@@ -156,8 +156,8 @@
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
-          "fish": "メバル",
-          "size": "~39cm",
+          "fish": "サバ",
+          "size": "",
           "count": "",
           "method": "",
           "user": "",
@@ -197,21 +197,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年5月31日(日)",
+    "date": "2026年6月1日(月)",
     "tide": "大潮",
-    "moonAge": 14.4,
+    "moonAge": 15.4,
     "moonName": "満月",
     "moonIcon": "🌕",
-    "sunrise": "16:50",
+    "sunrise": "16:49",
     "sunset": "31:08",
     "mazume": {
-      "morning": "16:20 - 17:20",
+      "morning": "16:19 - 17:19",
       "evening": "30:38 - 31:38"
     }
   },
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-05-31 21:47"
+    "lastCollected": "2026-06-01 08:28"
   }
 }
