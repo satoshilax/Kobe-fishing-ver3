@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-06T21:55:33.027014",
-  "lastUpdatedDisplay": "2026年6月6日(土)",
+  "lastUpdated": "2026-06-07T07:01:44.201909",
+  "lastUpdatedDisplay": "2026年6月7日(日)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -71,6 +71,17 @@
       "source": "fishing.ne.jp",
       "catches": [
         {
+          "fish": "台風あとで",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸東部"
+        },
+        {
           "fish": "釣れました^_^",
           "size": "",
           "count": "",
@@ -93,15 +104,15 @@
           "area_detail": "神戸東部"
         },
         {
-          "fish": "アジング",
+          "fish": "まだまだ豆アジ安定しない",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
           "date": "",
           "emoji": "🐠",
-          "description": "",
-          "area_detail": "神戸東部"
+          "description": "まだまだ豆アジ安定しない",
+          "area_detail": "神戸西部"
         },
         {
           "fish": "豆アジ株価少しだけ上昇？",
@@ -116,17 +127,6 @@
         },
         {
           "fish": "サビキ株価下落中②",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "大サバ調査",
           "size": "",
           "count": "",
           "method": "",
@@ -197,21 +197,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年6月6日(土)",
-    "tide": "中潮",
-    "moonAge": 20.4,
+    "date": "2026年6月7日(日)",
+    "tide": "小潮",
+    "moonAge": 21.4,
     "moonName": "下弦の月",
     "moonIcon": "🌗",
     "sunrise": "16:47",
-    "sunset": "31:10",
+    "sunset": "31:11",
     "mazume": {
       "morning": "16:17 - 17:17",
-      "evening": "30:40 - 31:40"
+      "evening": "30:41 - 31:41"
     }
   },
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-06-06 21:55"
+    "lastCollected": "2026-06-07 07:01"
   }
 }
