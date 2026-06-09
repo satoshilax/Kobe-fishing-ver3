@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-08T22:18:38.177549",
-  "lastUpdatedDisplay": "2026年6月8日(月)",
+  "lastUpdated": "2026-06-09T06:42:43.229545",
+  "lastUpdatedDisplay": "2026年6月9日(火)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -16,7 +16,52 @@
       "distance": 8.5,
       "info": "垂水区・足場良好・投げ釣り人気・駐車場あり",
       "source": "kobeumiduri.jp",
-      "catches": []
+      "catches": [
+        {
+          "fish": "ウミタナゴ",
+          "size": "13～20",
+          "count": "0～2尾",
+          "method": "胴突・落し込み",
+          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        },
+        {
+          "fish": "ガシラ",
+          "size": "12～20",
+          "count": "0～3尾",
+          "method": "胴突・落し込み",
+          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ・サバ切身",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★★",
+          "location": "全域"
+        },
+        {
+          "fish": "コブダイ",
+          "size": "30～60",
+          "count": "0～2尾",
+          "method": "落し込み・投げ釣り",
+          "user": "エサ:冷凍エビ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        },
+        {
+          "fish": "メバル",
+          "size": "13～20",
+          "count": "0～5尾",
+          "method": "ｳｷ釣り・胴突",
+          "user": "エサ:ｼﾗｻｴﾋﾞ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        }
+      ]
     },
     {
       "name": "カンパリ投稿",
@@ -25,6 +70,17 @@
       "info": "ユーザー投稿の釣果情報",
       "source": "fishing.ne.jp",
       "catches": [
+        {
+          "fish": "ショアタコ",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐙",
+          "description": "",
+          "area_detail": "神戸東部"
+        },
         {
           "fish": "台風あとで",
           "size": "",
@@ -48,15 +104,26 @@
           "area_detail": "神戸東部"
         },
         {
-          "fish": "美味しくいただきました",
+          "fish": "フカセ釣り",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
           "date": "",
           "emoji": "🐟",
-          "description": "美味しくいただきました",
-          "area_detail": "神戸東部"
+          "description": "",
+          "area_detail": "神戸西部"
+        },
+        {
+          "fish": "中サバ2本",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸西部"
         },
         {
           "fish": "まだまだ豆アジ安定しない",
@@ -67,28 +134,6 @@
           "date": "",
           "emoji": "🐠",
           "description": "まだまだ豆アジ安定しない",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "豆アジ株価少しだけ上昇？",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐠",
-          "description": "豆アジ株価少しだけ上昇？",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "サビキ株価下落中②",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
           "area_detail": "神戸西部"
         }
       ]
@@ -102,7 +147,7 @@
       "catches": [
         {
           "fish": "アジ",
-          "size": "~30cm",
+          "size": "",
           "count": "",
           "method": "",
           "user": "",
@@ -112,7 +157,7 @@
         },
         {
           "fish": "サバ",
-          "size": "~30cm",
+          "size": "",
           "count": "",
           "method": "",
           "user": "",
@@ -152,9 +197,9 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年6月8日(月)",
-    "tide": "小潮",
-    "moonAge": 22.4,
+    "date": "2026年6月9日(火)",
+    "tide": "長潮",
+    "moonAge": 23.4,
     "moonName": "下弦の月",
     "moonIcon": "🌗",
     "sunrise": "16:46",
@@ -165,8 +210,8 @@
     }
   },
   "stats": {
-    "totalCatches": 10,
+    "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-06-08 22:18"
+    "lastCollected": "2026-06-09 06:42"
   }
 }
