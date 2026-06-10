@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-09T22:17:29.041312",
-  "lastUpdatedDisplay": "2026年6月9日(火)",
+  "lastUpdated": "2026-06-10T07:02:56.989495",
+  "lastUpdatedDisplay": "2026年6月10日(水)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -104,6 +104,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "豆アジサビキまだいい日",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐠",
+          "description": "豆アジサビキまだいい日",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "豆アジまだまだ安定しない",
           "size": "",
           "count": "",
@@ -116,17 +127,6 @@
         },
         {
           "fish": "フカセ釣り",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "中サバ2本",
           "size": "",
           "count": "",
           "method": "",
@@ -151,7 +151,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "6/9",
+          "date": "6/10",
           "emoji": "🐠",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -161,7 +161,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "6/9",
+          "date": "6/10",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -171,7 +171,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "6/9",
+          "date": "6/10",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -181,7 +181,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "6/9",
+          "date": "6/10",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -197,21 +197,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年6月9日(火)",
+    "date": "2026年6月10日(水)",
     "tide": "長潮",
-    "moonAge": 23.4,
-    "moonName": "下弦の月",
-    "moonIcon": "🌗",
+    "moonAge": 24.4,
+    "moonName": "二十六夜",
+    "moonIcon": "🌘",
     "sunrise": "16:46",
-    "sunset": "31:11",
+    "sunset": "31:12",
     "mazume": {
       "morning": "16:16 - 17:16",
-      "evening": "30:41 - 31:41"
+      "evening": "30:42 - 31:42"
     }
   },
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-06-09 22:17"
+    "lastCollected": "2026-06-10 07:02"
   }
 }
