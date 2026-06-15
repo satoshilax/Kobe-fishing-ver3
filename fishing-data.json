@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-14T22:01:39.717020",
-  "lastUpdatedDisplay": "2026年6月14日(日)",
+  "lastUpdated": "2026-06-15T08:54:08.075851",
+  "lastUpdatedDisplay": "2026年6月15日(月)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -71,6 +71,17 @@
       "source": "fishing.ne.jp",
       "catches": [
         {
+          "fish": "釣れました",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸東部"
+        },
+        {
           "fish": "ショアタコ",
           "size": "",
           "count": "",
@@ -83,17 +94,6 @@
         },
         {
           "fish": "台風あとで",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸東部"
-        },
-        {
-          "fish": "釣れました^_^",
           "size": "",
           "count": "",
           "method": "",
@@ -197,9 +197,9 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年6月14日(日)",
+    "date": "2026年6月15日(月)",
     "tide": "大潮",
-    "moonAge": 28.4,
+    "moonAge": 29.4,
     "moonName": "新月",
     "moonIcon": "🌑",
     "sunrise": "16:45",
@@ -212,6 +212,6 @@
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-06-14 22:01"
+    "lastCollected": "2026-06-15 08:54"
   }
 }
