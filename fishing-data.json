@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-16T22:50:10.588294",
-  "lastUpdatedDisplay": "2026年6月16日(火)",
+  "lastUpdated": "2026-06-17T08:24:20.673687",
+  "lastUpdatedDisplay": "2026年6月17日(水)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -104,7 +104,7 @@
           "area_detail": "神戸東部"
         },
         {
-          "fish": "大サバ",
+          "fish": "コブダイ釣り",
           "size": "",
           "count": "",
           "method": "",
@@ -115,18 +115,18 @@
           "area_detail": "神戸西部"
         },
         {
-          "fish": "仕事終わりのサバ狙い",
+          "fish": "サバでサバが釣れる？",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
           "date": "",
           "emoji": "🐟",
-          "description": "仕事終わりのサバ狙い",
+          "description": "サバでサバが釣れる？",
           "area_detail": "神戸西部"
         },
         {
-          "fish": "餌の限り大サバ",
+          "fish": "大サバ",
           "size": "",
           "count": "",
           "method": "",
@@ -197,21 +197,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年6月16日(火)",
+    "date": "2026年6月17日(水)",
     "tide": "大潮",
-    "moonAge": 0.9,
-    "moonName": "新月",
-    "moonIcon": "🌑",
-    "sunrise": "16:45",
+    "moonAge": 1.9,
+    "moonName": "三日月",
+    "moonIcon": "🌒",
+    "sunrise": "16:44",
     "sunset": "31:13",
     "mazume": {
-      "morning": "16:15 - 17:15",
+      "morning": "16:14 - 17:14",
       "evening": "30:43 - 31:43"
     }
   },
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-06-16 22:50"
+    "lastCollected": "2026-06-17 08:24"
   }
 }
