@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-19T21:57:42.554191",
-  "lastUpdatedDisplay": "2026年6月19日(金)",
+  "lastUpdated": "2026-06-20T06:56:42.244431",
+  "lastUpdatedDisplay": "2026年6月20日(土)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -104,6 +104,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "小サバ多め",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "豆サバ大量発生中",
           "size": "",
           "count": "",
@@ -123,17 +134,6 @@
           "date": "",
           "emoji": "🐟",
           "description": "",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "サバでサバが釣れる？",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "サバでサバが釣れる？",
           "area_detail": "神戸西部"
         }
       ]
@@ -171,7 +171,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "6/19",
+          "date": "6/20",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -181,7 +181,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "6/19",
+          "date": "6/20",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -197,9 +197,9 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年6月19日(金)",
+    "date": "2026年6月20日(土)",
     "tide": "中潮",
-    "moonAge": 3.9,
+    "moonAge": 4.9,
     "moonName": "三日月",
     "moonIcon": "🌒",
     "sunrise": "16:44",
@@ -212,6 +212,6 @@
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-06-19 21:57"
+    "lastCollected": "2026-06-20 06:56"
   }
 }
