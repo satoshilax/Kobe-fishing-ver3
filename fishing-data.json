@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-20T21:58:48.130306",
-  "lastUpdatedDisplay": "2026年6月20日(土)",
+  "lastUpdated": "2026-06-21T07:28:25.809521",
+  "lastUpdatedDisplay": "2026年6月21日(日)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -104,6 +104,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "サビキ渋い",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "小サバ多め",
           "size": "",
           "count": "",
@@ -116,17 +127,6 @@
         },
         {
           "fish": "豆サバ大量発生中",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "コブダイ釣り",
           "size": "",
           "count": "",
           "method": "",
@@ -197,11 +197,11 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年6月20日(土)",
+    "date": "2026年6月21日(日)",
     "tide": "中潮",
-    "moonAge": 4.9,
-    "moonName": "三日月",
-    "moonIcon": "🌒",
+    "moonAge": 5.9,
+    "moonName": "上弦の月",
+    "moonIcon": "🌓",
     "sunrise": "16:44",
     "sunset": "31:13",
     "mazume": {
@@ -212,6 +212,6 @@
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-06-20 21:58"
+    "lastCollected": "2026-06-21 07:28"
   }
 }
