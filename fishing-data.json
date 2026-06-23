@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T06:42:44.869457",
+  "lastUpdated": "2026-06-23T12:10:43.343679",
   "lastUpdatedDisplay": "2026年6月23日(火)",
   "spots": [
     {
@@ -104,6 +104,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "小サバだらけ",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "サビキ渋い",
           "size": "",
           "count": "",
@@ -116,17 +127,6 @@
         },
         {
           "fish": "小サバ多め",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "豆サバ大量発生中",
           "size": "",
           "count": "",
           "method": "",
@@ -212,6 +212,6 @@
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-06-23 06:42"
+    "lastCollected": "2026-06-23 12:10"
   }
 }
