@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-02T21:58:17.357842",
-  "lastUpdatedDisplay": "2026年7月2日(木)",
+  "lastUpdated": "2026-07-03T06:24:53.102450",
+  "lastUpdatedDisplay": "2026年7月3日(金)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -104,6 +104,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "台風明け　サビキ御三家大量発生中",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "台風明け　サビキ御三家大量発生中",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "小サバだらけ",
           "size": "",
           "count": "",
@@ -116,17 +127,6 @@
         },
         {
           "fish": "サビキ渋い",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "小サバ多め",
           "size": "",
           "count": "",
           "method": "",
@@ -167,7 +167,7 @@
         },
         {
           "fish": "アジ",
-          "size": "~63cm",
+          "size": "",
           "count": "",
           "method": "",
           "user": "",
@@ -177,7 +177,7 @@
         },
         {
           "fish": "サバ",
-          "size": "~63cm",
+          "size": "",
           "count": "",
           "method": "",
           "user": "",
@@ -197,9 +197,9 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年7月2日(木)",
-    "tide": "若潮",
-    "moonAge": 16.9,
+    "date": "2026年7月3日(金)",
+    "tide": "中潮",
+    "moonAge": 17.9,
     "moonName": "十八夜",
     "moonIcon": "🌖",
     "sunrise": "16:46",
@@ -212,6 +212,6 @@
   "stats": {
     "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-07-02 21:58"
+    "lastCollected": "2026-07-03 06:24"
   }
 }
