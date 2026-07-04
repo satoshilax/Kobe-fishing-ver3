@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-03T21:55:29.015576",
-  "lastUpdatedDisplay": "2026年7月3日(金)",
+  "lastUpdated": "2026-07-04T06:13:40.657092",
+  "lastUpdatedDisplay": "2026年7月4日(土)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -16,7 +16,52 @@
       "distance": 8.5,
       "info": "垂水区・足場良好・投げ釣り人気・駐車場あり",
       "source": "kobeumiduri.jp",
-      "catches": []
+      "catches": [
+        {
+          "fish": "ウミタナゴ",
+          "size": "13～20",
+          "count": "0～2尾",
+          "method": "胴突・落し込み",
+          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        },
+        {
+          "fish": "ガシラ",
+          "size": "12～20",
+          "count": "0～3尾",
+          "method": "胴突・落し込み",
+          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ・サバ切身",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★★",
+          "location": "全域"
+        },
+        {
+          "fish": "コブダイ",
+          "size": "30～60",
+          "count": "0～2尾",
+          "method": "落し込み・投げ釣り",
+          "user": "エサ:冷凍エビ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        },
+        {
+          "fish": "メバル",
+          "size": "13～20",
+          "count": "0～5尾",
+          "method": "ｳｷ釣り・胴突",
+          "user": "エサ:ｼﾗｻｴﾋﾞ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        }
+      ]
     },
     {
       "name": "カンパリ投稿",
@@ -59,6 +104,17 @@
           "area_detail": "神戸東部"
         },
         {
+          "fish": "雨が降る前にカラバリとサビキ",
+          "size": "",
+          "count": "",
+          "method": "",
+          "user": "",
+          "date": "",
+          "emoji": "🐟",
+          "description": "雨が降る前にカラバリとサビキ",
+          "area_detail": "神戸西部"
+        },
+        {
           "fish": "台風明け　サビキ御三家大量発生中",
           "size": "",
           "count": "",
@@ -71,17 +127,6 @@
         },
         {
           "fish": "小サバだらけ",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "サビキ渋い",
           "size": "",
           "count": "",
           "method": "",
@@ -126,18 +171,18 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/3",
+          "date": "7/4",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "サバ",
+          "fish": "イカ",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/3",
-          "emoji": "🐟",
+          "date": "7/4",
+          "emoji": "🦑",
           "description": "垂水店の釣果情報一覧"
         }
       ]
@@ -152,21 +197,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年7月3日(金)",
+    "date": "2026年7月4日(土)",
     "tide": "中潮",
-    "moonAge": 17.9,
+    "moonAge": 18.9,
     "moonName": "十八夜",
     "moonIcon": "🌖",
     "sunrise": "16:46",
-    "sunset": "31:12",
+    "sunset": "31:11",
     "mazume": {
       "morning": "16:16 - 17:16",
-      "evening": "30:42 - 31:42"
+      "evening": "30:41 - 31:41"
     }
   },
   "stats": {
-    "totalCatches": 10,
+    "totalCatches": 14,
     "sources": 5,
-    "lastCollected": "2026-07-03 21:55"
+    "lastCollected": "2026-07-04 06:13"
   }
 }
