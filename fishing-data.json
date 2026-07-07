@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-06T22:05:32.404102",
-  "lastUpdatedDisplay": "2026年7月6日(月)",
+  "lastUpdated": "2026-07-07T06:39:00.245194",
+  "lastUpdatedDisplay": "2026年7月7日(火)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -69,74 +69,7 @@
       "distance": null,
       "info": "ユーザー投稿の釣果情報",
       "source": "fishing.ne.jp",
-      "catches": [
-        {
-          "fish": "釣れました",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸東部"
-        },
-        {
-          "fish": "ショアタコ",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐙",
-          "description": "",
-          "area_detail": "神戸東部"
-        },
-        {
-          "fish": "台風あとで",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸東部"
-        },
-        {
-          "fish": "雨が降る前にカラバリとサビキ",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "雨が降る前にカラバリとサビキ",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "台風明け　サビキ御三家大量発生中",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "台風明け　サビキ御三家大量発生中",
-          "area_detail": "神戸西部"
-        },
-        {
-          "fish": "小サバだらけ",
-          "size": "",
-          "count": "",
-          "method": "",
-          "user": "",
-          "date": "",
-          "emoji": "🐟",
-          "description": "",
-          "area_detail": "神戸西部"
-        }
-      ]
+      "catches": []
     },
     {
       "name": "フィッシングマックス",
@@ -151,7 +84,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/6",
+          "date": "7/7",
           "emoji": "🐠",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -161,7 +94,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/6",
+          "date": "7/7",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -171,7 +104,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/6",
+          "date": "7/7",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -181,7 +114,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/6",
+          "date": "7/7",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -197,21 +130,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年7月6日(月)",
-    "tide": "中潮",
-    "moonAge": 20.9,
+    "date": "2026年7月7日(火)",
+    "tide": "小潮",
+    "moonAge": 21.9,
     "moonName": "下弦の月",
     "moonIcon": "🌗",
     "sunrise": "16:47",
-    "sunset": "31:11",
+    "sunset": "31:10",
     "mazume": {
       "morning": "16:17 - 17:17",
-      "evening": "30:41 - 31:41"
+      "evening": "30:40 - 31:40"
     }
   },
   "stats": {
-    "totalCatches": 14,
+    "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-07-06 22:05"
+    "lastCollected": "2026-07-07 06:39"
   }
 }
