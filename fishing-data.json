@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T11:09:18.438384",
+  "lastUpdated": "2026-07-08T21:57:58.690373",
   "lastUpdatedDisplay": "2026年7月8日(水)",
   "spots": [
     {
@@ -16,7 +16,52 @@
       "distance": 8.5,
       "info": "垂水区・足場良好・投げ釣り人気・駐車場あり",
       "source": "kobeumiduri.jp",
-      "catches": []
+      "catches": [
+        {
+          "fish": "ウミタナゴ",
+          "size": "13～20",
+          "count": "0～2尾",
+          "method": "胴突・落し込み",
+          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        },
+        {
+          "fish": "ガシラ",
+          "size": "12～20",
+          "count": "0～3尾",
+          "method": "胴突・落し込み",
+          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ・サバ切身",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★★",
+          "location": "全域"
+        },
+        {
+          "fish": "コブダイ",
+          "size": "30～60",
+          "count": "0～2尾",
+          "method": "落し込み・投げ釣り",
+          "user": "エサ:冷凍エビ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        },
+        {
+          "fish": "メバル",
+          "size": "13～20",
+          "count": "0～5尾",
+          "method": "ｳｷ釣り・胴突",
+          "user": "エサ:ｼﾗｻｴﾋﾞ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        }
+      ]
     },
     {
       "name": "カンパリ投稿",
@@ -39,7 +84,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/8",
+          "date": "7/9",
           "emoji": "🐠",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -49,7 +94,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/8",
+          "date": "7/9",
           "emoji": "🐙",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -98,8 +143,8 @@
     }
   },
   "stats": {
-    "totalCatches": 4,
+    "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-07-08 11:09"
+    "lastCollected": "2026-07-08 21:57"
   }
 }
