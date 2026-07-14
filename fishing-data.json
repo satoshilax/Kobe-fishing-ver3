@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-13T21:43:33.328310",
-  "lastUpdatedDisplay": "2026年7月13日(月)",
+  "lastUpdated": "2026-07-14T05:22:58.033255",
+  "lastUpdatedDisplay": "2026年7月14日(火)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -16,52 +16,7 @@
       "distance": 8.5,
       "info": "垂水区・足場良好・投げ釣り人気・駐車場あり",
       "source": "kobeumiduri.jp",
-      "catches": [
-        {
-          "fish": "ウミタナゴ",
-          "size": "13～20",
-          "count": "0～2尾",
-          "method": "胴突・落し込み",
-          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ",
-          "date": "今月実績",
-          "emoji": "🐟",
-          "rating": "★",
-          "location": "全域"
-        },
-        {
-          "fish": "ガシラ",
-          "size": "12～20",
-          "count": "0～3尾",
-          "method": "胴突・落し込み",
-          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ・サバ切身",
-          "date": "今月実績",
-          "emoji": "🐟",
-          "rating": "★★",
-          "location": "全域"
-        },
-        {
-          "fish": "コブダイ",
-          "size": "30～60",
-          "count": "0～2尾",
-          "method": "落し込み・投げ釣り",
-          "user": "エサ:冷凍エビ",
-          "date": "今月実績",
-          "emoji": "🐟",
-          "rating": "★",
-          "location": "全域"
-        },
-        {
-          "fish": "メバル",
-          "size": "13～20",
-          "count": "0～5尾",
-          "method": "ｳｷ釣り・胴突",
-          "user": "エサ:ｼﾗｻｴﾋﾞ",
-          "date": "今月実績",
-          "emoji": "🐟",
-          "rating": "★",
-          "location": "全域"
-        }
-      ]
+      "catches": []
     },
     {
       "name": "カンパリ投稿",
@@ -130,21 +85,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年7月13日(月)",
-    "tide": "若潮",
-    "moonAge": 27.9,
+    "date": "2026年7月14日(火)",
+    "tide": "大潮",
+    "moonAge": 28.9,
     "moonName": "新月",
     "moonIcon": "🌑",
     "sunrise": "16:50",
-    "sunset": "31:08",
+    "sunset": "31:07",
     "mazume": {
       "morning": "16:20 - 17:20",
-      "evening": "30:38 - 31:38"
+      "evening": "30:37 - 31:37"
     }
   },
   "stats": {
-    "totalCatches": 8,
+    "totalCatches": 4,
     "sources": 5,
-    "lastCollected": "2026-07-13 21:43"
+    "lastCollected": "2026-07-14 05:22"
   }
 }
