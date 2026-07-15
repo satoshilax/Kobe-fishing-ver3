@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-14T21:45:20.386242",
-  "lastUpdatedDisplay": "2026年7月14日(火)",
+  "lastUpdated": "2026-07-15T05:24:12.127778",
+  "lastUpdatedDisplay": "2026年7月15日(水)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -80,21 +80,21 @@
       "catches": [
         {
           "fish": "アジ",
-          "size": "",
+          "size": "~46cm",
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/14",
+          "date": "7/15",
           "emoji": "🐠",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
           "fish": "タコ",
-          "size": "",
+          "size": "~46cm",
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/14",
+          "date": "7/15",
           "emoji": "🐙",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -104,18 +104,18 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/14",
+          "date": "7/15",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "サバ",
+          "fish": "タコ",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/14",
-          "emoji": "🐟",
+          "date": "7/15",
+          "emoji": "🐙",
           "description": "垂水店の釣果情報一覧"
         }
       ]
@@ -130,21 +130,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年7月14日(火)",
+    "date": "2026年7月15日(水)",
     "tide": "大潮",
-    "moonAge": 28.9,
+    "moonAge": 0.4,
     "moonName": "新月",
     "moonIcon": "🌑",
-    "sunrise": "16:50",
+    "sunrise": "16:51",
     "sunset": "31:07",
     "mazume": {
-      "morning": "16:20 - 17:20",
+      "morning": "16:21 - 17:21",
       "evening": "30:37 - 31:37"
     }
   },
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-07-14 21:45"
+    "lastCollected": "2026-07-15 05:24"
   }
 }
