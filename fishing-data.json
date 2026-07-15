@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T05:24:12.127778",
+  "lastUpdated": "2026-07-15T10:55:30.606276",
   "lastUpdatedDisplay": "2026年7月15日(水)",
   "spots": [
     {
@@ -109,13 +109,13 @@
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "タコ",
+          "fish": "サワラ",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
           "date": "7/15",
-          "emoji": "🐙",
+          "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
       ]
@@ -145,6 +145,6 @@
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-07-15 05:24"
+    "lastCollected": "2026-07-15 10:55"
   }
 }
