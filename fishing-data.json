@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-19T05:44:02.883505",
+  "lastUpdated": "2026-07-19T10:38:35.030016",
   "lastUpdatedDisplay": "2026年7月19日(日)",
   "spots": [
     {
@@ -109,7 +109,7 @@
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "サバ",
+          "fish": "ハマチ",
           "size": "",
           "count": "",
           "method": "",
@@ -145,6 +145,6 @@
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-07-19 05:44"
+    "lastCollected": "2026-07-19 10:38"
   }
 }
