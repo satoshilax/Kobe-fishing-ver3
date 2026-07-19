@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-18T21:39:30.962015",
-  "lastUpdatedDisplay": "2026年7月18日(土)",
+  "lastUpdated": "2026-07-19T05:44:02.883505",
+  "lastUpdatedDisplay": "2026年7月19日(日)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -100,21 +100,21 @@
         },
         {
           "fish": "アジ",
-          "size": "~７４cm",
+          "size": "",
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/18",
+          "date": "7/19",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
         {
           "fish": "サバ",
-          "size": "~７４cm",
+          "size": "",
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/18",
+          "date": "7/19",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -130,21 +130,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年7月18日(土)",
+    "date": "2026年7月19日(日)",
     "tide": "中潮",
-    "moonAge": 3.4,
+    "moonAge": 4.4,
     "moonName": "三日月",
     "moonIcon": "🌒",
-    "sunrise": "16:52",
-    "sunset": "31:05",
+    "sunrise": "16:53",
+    "sunset": "31:04",
     "mazume": {
-      "morning": "16:22 - 17:22",
-      "evening": "30:35 - 31:35"
+      "morning": "16:23 - 17:23",
+      "evening": "30:34 - 31:34"
     }
   },
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-07-18 21:39"
+    "lastCollected": "2026-07-19 05:44"
   }
 }
