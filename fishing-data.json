@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-23T11:14:20.751258",
+  "lastUpdated": "2026-07-23T21:55:35.040014",
   "lastUpdatedDisplay": "2026年7月23日(木)",
   "spots": [
     {
@@ -84,7 +84,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/23",
+          "date": "7/24",
           "emoji": "🐠",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -94,7 +94,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/23",
+          "date": "7/24",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -104,7 +104,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/23",
+          "date": "7/24",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -114,7 +114,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "7/23",
+          "date": "7/24",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -145,6 +145,6 @@
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-07-23 11:14"
+    "lastCollected": "2026-07-23 21:55"
   }
 }
