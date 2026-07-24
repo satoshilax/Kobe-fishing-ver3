@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-23T21:55:35.040014",
-  "lastUpdatedDisplay": "2026年7月23日(木)",
+  "lastUpdated": "2026-07-24T05:43:11.722616",
+  "lastUpdatedDisplay": "2026年7月24日(金)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -130,21 +130,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年7月23日(木)",
-    "tide": "小潮",
-    "moonAge": 8.4,
-    "moonName": "上弦の月",
-    "moonIcon": "🌓",
+    "date": "2026年7月24日(金)",
+    "tide": "長潮",
+    "moonAge": 9.4,
+    "moonName": "十三夜",
+    "moonIcon": "🌔",
     "sunrise": "16:56",
-    "sunset": "31:02",
+    "sunset": "31:01",
     "mazume": {
       "morning": "16:26 - 17:26",
-      "evening": "30:32 - 31:32"
+      "evening": "30:31 - 31:31"
     }
   },
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-07-23 21:55"
+    "lastCollected": "2026-07-24 05:43"
   }
 }
