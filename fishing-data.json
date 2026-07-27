@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-27T12:29:44.050365",
+  "lastUpdated": "2026-07-27T21:55:48.530901",
   "lastUpdatedDisplay": "2026年7月27日(月)",
   "spots": [
     {
@@ -80,7 +80,7 @@
       "catches": [
         {
           "fish": "アジ",
-          "size": "",
+          "size": "~20cm",
           "count": "",
           "method": "",
           "user": "",
@@ -90,7 +90,7 @@
         },
         {
           "fish": "サバ",
-          "size": "",
+          "size": "~20cm",
           "count": "",
           "method": "",
           "user": "",
@@ -145,6 +145,6 @@
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-07-27 12:29"
+    "lastCollected": "2026-07-27 21:55"
   }
 }
