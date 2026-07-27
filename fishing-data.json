@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-27T06:20:55.260485",
+  "lastUpdated": "2026-07-27T12:29:44.050365",
   "lastUpdatedDisplay": "2026年7月27日(月)",
   "spots": [
     {
@@ -109,7 +109,7 @@
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "メバル",
+          "fish": "チヌ",
           "size": "",
           "count": "",
           "method": "",
@@ -145,6 +145,6 @@
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-07-27 06:20"
+    "lastCollected": "2026-07-27 12:29"
   }
 }
