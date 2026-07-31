@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-31T05:58:35.340231",
+  "lastUpdated": "2026-07-31T11:32:01.610659",
   "lastUpdatedDisplay": "2026年7月31日(金)",
   "spots": [
     {
@@ -109,13 +109,13 @@
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "マダイ",
+          "fish": "サワラ",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
           "date": "7/31",
-          "emoji": "🎣",
+          "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
       ]
@@ -145,6 +145,6 @@
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-07-31 05:58"
+    "lastCollected": "2026-07-31 11:32"
   }
 }
