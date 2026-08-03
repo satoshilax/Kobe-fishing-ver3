@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-02T21:43:53.007389",
-  "lastUpdatedDisplay": "2026年8月2日(日)",
+  "lastUpdated": "2026-08-03T06:12:50.756184",
+  "lastUpdatedDisplay": "2026年8月3日(月)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -16,7 +16,52 @@
       "distance": 8.5,
       "info": "垂水区・足場良好・投げ釣り人気・駐車場あり",
       "source": "kobeumiduri.jp",
-      "catches": []
+      "catches": [
+        {
+          "fish": "ウミタナゴ",
+          "size": "13～20",
+          "count": "0～2尾",
+          "method": "胴突・落し込み",
+          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        },
+        {
+          "fish": "ガシラ",
+          "size": "12～20",
+          "count": "0～3尾",
+          "method": "胴突・落し込み",
+          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ・サバ切身",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★★",
+          "location": "全域"
+        },
+        {
+          "fish": "コブダイ",
+          "size": "30～60",
+          "count": "0～2尾",
+          "method": "落し込み・投げ釣り",
+          "user": "エサ:冷凍エビ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        },
+        {
+          "fish": "メバル",
+          "size": "13～20",
+          "count": "0～5尾",
+          "method": "ｳｷ釣り・胴突",
+          "user": "エサ:ｼﾗｻｴﾋﾞ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        }
+      ]
     },
     {
       "name": "カンパリ投稿",
@@ -85,21 +130,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年8月2日(日)",
+    "date": "2026年8月3日(月)",
     "tide": "中潮",
-    "moonAge": 18.4,
+    "moonAge": 19.4,
     "moonName": "十八夜",
     "moonIcon": "🌖",
-    "sunrise": "17:03",
-    "sunset": "30:54",
+    "sunrise": "17:04",
+    "sunset": "30:53",
     "mazume": {
-      "morning": "16:33 - 17:33",
-      "evening": "30:24 - 31:24"
+      "morning": "16:34 - 17:34",
+      "evening": "30:23 - 31:23"
     }
   },
   "stats": {
-    "totalCatches": 4,
+    "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-08-02 21:43"
+    "lastCollected": "2026-08-03 06:12"
   }
 }
