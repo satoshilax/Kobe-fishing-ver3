@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-06T11:27:56.215932",
-  "lastUpdatedDisplay": "2026年8月6日(木)",
+  "lastUpdated": "2026-08-07T00:59:25.109774",
+  "lastUpdatedDisplay": "2026年8月7日(金)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -16,52 +16,7 @@
       "distance": 8.5,
       "info": "垂水区・足場良好・投げ釣り人気・駐車場あり",
       "source": "kobeumiduri.jp",
-      "catches": [
-        {
-          "fish": "ウミタナゴ",
-          "size": "13～20",
-          "count": "0～2尾",
-          "method": "胴突・落し込み",
-          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ",
-          "date": "今月実績",
-          "emoji": "🐟",
-          "rating": "★",
-          "location": "全域"
-        },
-        {
-          "fish": "ガシラ",
-          "size": "12～20",
-          "count": "0～3尾",
-          "method": "胴突・落し込み",
-          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ・サバ切身",
-          "date": "今月実績",
-          "emoji": "🐟",
-          "rating": "★★",
-          "location": "全域"
-        },
-        {
-          "fish": "コブダイ",
-          "size": "30～60",
-          "count": "0～2尾",
-          "method": "落し込み・投げ釣り",
-          "user": "エサ:冷凍エビ",
-          "date": "今月実績",
-          "emoji": "🐟",
-          "rating": "★",
-          "location": "全域"
-        },
-        {
-          "fish": "メバル",
-          "size": "13～20",
-          "count": "0～5尾",
-          "method": "ｳｷ釣り・胴突",
-          "user": "エサ:ｼﾗｻｴﾋﾞ",
-          "date": "今月実績",
-          "emoji": "🐟",
-          "rating": "★",
-          "location": "全域"
-        }
-      ]
+      "catches": []
     },
     {
       "name": "カンパリ投稿",
@@ -84,7 +39,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "8/6",
+          "date": "8/7",
           "emoji": "🐠",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -94,27 +49,27 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "8/6",
+          "date": "8/7",
           "emoji": "🗡️",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
           "fish": "アジ",
-          "size": "~17cm",
+          "size": "~10cm",
           "count": "",
           "method": "",
           "user": "",
-          "date": "8/6",
+          "date": "8/7",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
         {
           "fish": "サバ",
-          "size": "~17cm",
+          "size": "~10cm",
           "count": "",
           "method": "",
           "user": "",
-          "date": "8/6",
+          "date": "8/7",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -130,21 +85,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年8月6日(木)",
-    "tide": "小潮",
-    "moonAge": 22.4,
+    "date": "2026年8月7日(金)",
+    "tide": "長潮",
+    "moonAge": 23.4,
     "moonName": "下弦の月",
     "moonIcon": "🌗",
-    "sunrise": "17:07",
-    "sunset": "30:51",
+    "sunrise": "17:08",
+    "sunset": "30:50",
     "mazume": {
-      "morning": "16:37 - 17:37",
-      "evening": "30:21 - 31:21"
+      "morning": "16:38 - 17:38",
+      "evening": "30:20 - 31:20"
     }
   },
   "stats": {
-    "totalCatches": 8,
+    "totalCatches": 4,
     "sources": 5,
-    "lastCollected": "2026-08-06 11:27"
+    "lastCollected": "2026-08-07 00:59"
   }
 }
