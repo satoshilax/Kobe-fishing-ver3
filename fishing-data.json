@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-17T21:15:26.335556",
-  "lastUpdatedDisplay": "2026年8月17日(月)",
+  "lastUpdated": "2026-08-18T03:38:03.358394",
+  "lastUpdatedDisplay": "2026年8月18日(火)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -16,52 +16,7 @@
       "distance": 8.5,
       "info": "垂水区・足場良好・投げ釣り人気・駐車場あり",
       "source": "kobeumiduri.jp",
-      "catches": [
-        {
-          "fish": "ウミタナゴ",
-          "size": "13～20",
-          "count": "0～2尾",
-          "method": "胴突・落し込み",
-          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ",
-          "date": "今月実績",
-          "emoji": "🐟",
-          "rating": "★",
-          "location": "全域"
-        },
-        {
-          "fish": "ガシラ",
-          "size": "12～20",
-          "count": "0～3尾",
-          "method": "胴突・落し込み",
-          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ・サバ切身",
-          "date": "今月実績",
-          "emoji": "🐟",
-          "rating": "★★",
-          "location": "全域"
-        },
-        {
-          "fish": "コブダイ",
-          "size": "30～60",
-          "count": "0～2尾",
-          "method": "落し込み・投げ釣り",
-          "user": "エサ:冷凍エビ",
-          "date": "今月実績",
-          "emoji": "🐟",
-          "rating": "★",
-          "location": "全域"
-        },
-        {
-          "fish": "メバル",
-          "size": "13～20",
-          "count": "0～5尾",
-          "method": "ｳｷ釣り・胴突",
-          "user": "エサ:ｼﾗｻｴﾋﾞ",
-          "date": "今月実績",
-          "emoji": "🐟",
-          "rating": "★",
-          "location": "全域"
-        }
-      ]
+      "catches": []
     },
     {
       "name": "カンパリ投稿",
@@ -104,7 +59,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "8/17",
+          "date": "8/18",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -114,7 +69,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "8/17",
+          "date": "8/18",
           "emoji": "🗡️",
           "description": "垂水店の釣果情報一覧"
         }
@@ -130,21 +85,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年8月17日(月)",
+    "date": "2026年8月18日(火)",
     "tide": "中潮",
-    "moonAge": 3.8,
+    "moonAge": 4.8,
     "moonName": "三日月",
     "moonIcon": "🌒",
-    "sunrise": "17:17",
-    "sunset": "30:40",
+    "sunrise": "17:18",
+    "sunset": "30:39",
     "mazume": {
-      "morning": "16:47 - 17:47",
-      "evening": "30:10 - 31:10"
+      "morning": "16:48 - 17:48",
+      "evening": "30:09 - 31:09"
     }
   },
   "stats": {
-    "totalCatches": 8,
+    "totalCatches": 4,
     "sources": 5,
-    "lastCollected": "2026-08-17 21:15"
+    "lastCollected": "2026-08-18 03:38"
   }
 }
