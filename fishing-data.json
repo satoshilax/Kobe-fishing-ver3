@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-23T09:32:33.551465",
+  "lastUpdated": "2026-08-23T21:11:13.236510",
   "lastUpdatedDisplay": "2026年8月23日(日)",
   "spots": [
     {
@@ -84,7 +84,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "8/23",
+          "date": "8/24",
           "emoji": "🐠",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -94,7 +94,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "8/23",
+          "date": "8/24",
           "emoji": "🗡️",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -145,6 +145,6 @@
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-08-23 09:32"
+    "lastCollected": "2026-08-23 21:11"
   }
 }
