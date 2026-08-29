@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-29T02:56:42.646294",
+  "lastUpdated": "2026-08-29T09:37:17.771564",
   "lastUpdatedDisplay": "2026年8月29日(土)",
   "spots": [
     {
@@ -16,7 +16,52 @@
       "distance": 8.5,
       "info": "垂水区・足場良好・投げ釣り人気・駐車場あり",
       "source": "kobeumiduri.jp",
-      "catches": []
+      "catches": [
+        {
+          "fish": "ウミタナゴ",
+          "size": "13～20",
+          "count": "0～2尾",
+          "method": "胴突・落し込み",
+          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        },
+        {
+          "fish": "ガシラ",
+          "size": "12～20",
+          "count": "0～3尾",
+          "method": "胴突・落し込み",
+          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ・サバ切身",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★★",
+          "location": "全域"
+        },
+        {
+          "fish": "コブダイ",
+          "size": "30～60",
+          "count": "0～2尾",
+          "method": "落し込み・投げ釣り",
+          "user": "エサ:冷凍エビ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        },
+        {
+          "fish": "メバル",
+          "size": "13～20",
+          "count": "0～5尾",
+          "method": "ｳｷ釣り・胴突",
+          "user": "エサ:ｼﾗｻｴﾋﾞ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        }
+      ]
     },
     {
       "name": "カンパリ投稿",
@@ -35,7 +80,7 @@
       "catches": [
         {
           "fish": "アジ",
-          "size": "~20cm",
+          "size": "",
           "count": "",
           "method": "",
           "user": "",
@@ -45,7 +90,7 @@
         },
         {
           "fish": "タチウオ",
-          "size": "~20cm",
+          "size": "",
           "count": "",
           "method": "",
           "user": "",
@@ -98,8 +143,8 @@
     }
   },
   "stats": {
-    "totalCatches": 4,
+    "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-08-29 02:56"
+    "lastCollected": "2026-08-29 09:37"
   }
 }
