@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-23T23:18:04.412241",
-  "lastUpdatedDisplay": "2026年9月23日(水)",
+  "lastUpdated": "2026-09-24T08:00:52.085368",
+  "lastUpdatedDisplay": "2026年9月24日(木)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -89,7 +89,7 @@
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
-          "fish": "サバ",
+          "fish": "チヌ",
           "size": "",
           "count": "",
           "method": "",
@@ -104,7 +104,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "9/23",
+          "date": "9/24",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -114,7 +114,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "9/23",
+          "date": "9/24",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -130,21 +130,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年9月23日(水)",
+    "date": "2026年9月24日(木)",
     "tide": "若潮",
-    "moonAge": 11.3,
+    "moonAge": 12.3,
     "moonName": "十三夜",
     "moonIcon": "🌔",
-    "sunrise": "17:57",
-    "sunset": "30:00",
+    "sunrise": "17:58",
+    "sunset": "29:59",
     "mazume": {
-      "morning": "17:27 - 18:27",
-      "evening": "29:30 - 30:30"
+      "morning": "17:28 - 18:28",
+      "evening": "29:29 - 30:29"
     }
   },
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-09-23 23:18"
+    "lastCollected": "2026-09-24 08:00"
   }
 }
