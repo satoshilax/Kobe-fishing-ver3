@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-24T23:38:59.691687",
-  "lastUpdatedDisplay": "2026年9月24日(木)",
+  "lastUpdated": "2026-09-25T08:24:58.563199",
+  "lastUpdatedDisplay": "2026年9月25日(金)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -16,7 +16,52 @@
       "distance": 8.5,
       "info": "垂水区・足場良好・投げ釣り人気・駐車場あり",
       "source": "kobeumiduri.jp",
-      "catches": []
+      "catches": [
+        {
+          "fish": "ウミタナゴ",
+          "size": "13～20",
+          "count": "0～2尾",
+          "method": "胴突・落し込み",
+          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        },
+        {
+          "fish": "ガシラ",
+          "size": "12～20",
+          "count": "0～3尾",
+          "method": "胴突・落し込み",
+          "user": "エサ:ｱｵﾑｼ・ｼﾗｻｴﾋﾞ・サバ切身",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★★",
+          "location": "全域"
+        },
+        {
+          "fish": "コブダイ",
+          "size": "30～60",
+          "count": "0～2尾",
+          "method": "落し込み・投げ釣り",
+          "user": "エサ:冷凍エビ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        },
+        {
+          "fish": "メバル",
+          "size": "13～20",
+          "count": "0～5尾",
+          "method": "ｳｷ釣り・胴突",
+          "user": "エサ:ｼﾗｻｴﾋﾞ",
+          "date": "今月実績",
+          "emoji": "🐟",
+          "rating": "★",
+          "location": "全域"
+        }
+      ]
     },
     {
       "name": "カンパリ投稿",
@@ -39,17 +84,17 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "9/24",
+          "date": "9/25",
           "emoji": "🐠",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
-          "fish": "サワラ",
+          "fish": "カワハギ",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
-          "date": "9/24",
+          "date": "9/25",
           "emoji": "🐟",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -59,7 +104,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "9/24",
+          "date": "9/25",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -69,7 +114,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "9/24",
+          "date": "9/25",
           "emoji": "🐟",
           "description": "垂水店の釣果情報一覧"
         }
@@ -85,21 +130,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年9月24日(木)",
+    "date": "2026年9月25日(金)",
     "tide": "若潮",
-    "moonAge": 12.3,
-    "moonName": "十三夜",
-    "moonIcon": "🌔",
-    "sunrise": "17:58",
-    "sunset": "29:59",
+    "moonAge": 13.3,
+    "moonName": "満月",
+    "moonIcon": "🌕",
+    "sunrise": "17:59",
+    "sunset": "29:58",
     "mazume": {
-      "morning": "17:28 - 18:28",
-      "evening": "29:29 - 30:29"
+      "morning": "17:29 - 18:29",
+      "evening": "29:28 - 30:28"
     }
   },
   "stats": {
-    "totalCatches": 4,
+    "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-09-24 23:38"
+    "lastCollected": "2026-09-25 08:24"
   }
 }
