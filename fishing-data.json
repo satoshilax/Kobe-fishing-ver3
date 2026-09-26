@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-26T08:12:11.582443",
+  "lastUpdated": "2026-09-26T13:41:31.188933",
   "lastUpdatedDisplay": "2026年9月26日(土)",
   "spots": [
     {
@@ -89,13 +89,13 @@
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
-          "fish": "チヌ",
+          "fish": "タチウオ",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
           "date": "9/26",
-          "emoji": "🐟",
+          "emoji": "🗡️",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
         {
@@ -145,6 +145,6 @@
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-09-26 08:12"
+    "lastCollected": "2026-09-26 13:41"
   }
 }
