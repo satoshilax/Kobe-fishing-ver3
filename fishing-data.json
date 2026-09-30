@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-30T00:00:14.571716",
+  "lastUpdated": "2026-09-30T09:11:38.130305",
   "lastUpdatedDisplay": "2026年9月30日(水)",
   "spots": [
     {
@@ -84,7 +84,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "9/29",
+          "date": "9/30",
           "emoji": "🐠",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -94,7 +94,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "9/29",
+          "date": "9/30",
           "emoji": "🗡️",
           "description": "神戸ハーバー店の釣果情報一覧"
         },
@@ -109,13 +109,13 @@
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "サバ",
+          "fish": "タチウオ",
           "size": "",
           "count": "",
           "method": "",
           "user": "",
           "date": "9/30",
-          "emoji": "🐟",
+          "emoji": "🗡️",
           "description": "垂水店の釣果情報一覧"
         }
       ]
@@ -145,6 +145,6 @@
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-09-30 00:00"
+    "lastCollected": "2026-09-30 09:11"
   }
 }
