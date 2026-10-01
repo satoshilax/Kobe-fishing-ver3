@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-01T00:14:34.102920",
+  "lastUpdated": "2026-10-01T09:39:47.526233",
   "lastUpdatedDisplay": "2026年10月1日(木)",
   "spots": [
     {
@@ -59,7 +59,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "9/30",
+          "date": "10/1",
           "emoji": "🐠",
           "description": "垂水店の釣果情報一覧"
         },
@@ -69,7 +69,7 @@
           "count": "",
           "method": "",
           "user": "",
-          "date": "9/30",
+          "date": "10/1",
           "emoji": "🗡️",
           "description": "垂水店の釣果情報一覧"
         }
@@ -100,6 +100,6 @@
   "stats": {
     "totalCatches": 4,
     "sources": 5,
-    "lastCollected": "2026-10-01 00:14"
+    "lastCollected": "2026-10-01 09:39"
   }
 }
