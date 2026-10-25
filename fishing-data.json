@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-24T22:46:56.192426",
-  "lastUpdatedDisplay": "2026年10月24日(土)",
+  "lastUpdated": "2026-10-25T07:59:00.380075",
+  "lastUpdatedDisplay": "2026年10月25日(日)",
   "spots": [
     {
       "name": "須磨海づり公園",
@@ -80,7 +80,7 @@
       "catches": [
         {
           "fish": "アジ",
-          "size": "",
+          "size": "~50cm",
           "count": "",
           "method": "",
           "user": "",
@@ -90,7 +90,7 @@
         },
         {
           "fish": "タチウオ",
-          "size": "",
+          "size": "~50cm",
           "count": "",
           "method": "",
           "user": "",
@@ -130,21 +130,21 @@
     }
   ],
   "tideInfo": {
-    "date": "2026年10月24日(土)",
-    "tide": "若潮",
-    "moonAge": 12.8,
-    "moonName": "十三夜",
-    "moonIcon": "🌔",
-    "sunrise": "18:30",
-    "sunset": "29:27",
+    "date": "2026年10月25日(日)",
+    "tide": "大潮",
+    "moonAge": 13.8,
+    "moonName": "満月",
+    "moonIcon": "🌕",
+    "sunrise": "18:31",
+    "sunset": "29:26",
     "mazume": {
-      "morning": "18:00 - 19:00",
-      "evening": "28:57 - 29:57"
+      "morning": "18:01 - 19:01",
+      "evening": "28:56 - 29:56"
     }
   },
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-10-24 22:46"
+    "lastCollected": "2026-10-25 07:59"
   }
 }
