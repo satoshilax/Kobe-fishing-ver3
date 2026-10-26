@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-26T08:20:49.826450",
+  "lastUpdated": "2026-10-26T16:00:00.112083",
   "lastUpdatedDisplay": "2026年10月26日(月)",
   "spots": [
     {
@@ -145,6 +145,6 @@
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-10-26 08:20"
+    "lastCollected": "2026-10-26 16:00"
   }
 }
