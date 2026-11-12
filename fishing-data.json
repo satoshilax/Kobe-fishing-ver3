@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T10:31:01.487559",
+  "lastUpdated": "2026-11-12T17:28:34.979448",
   "lastUpdatedDisplay": "2026年11月12日(木)",
   "spots": [
     {
@@ -109,7 +109,7 @@
           "description": "垂水店の釣果情報一覧"
         },
         {
-          "fish": "サバ",
+          "fish": "メバル",
           "size": "",
           "count": "",
           "method": "",
@@ -145,6 +145,6 @@
   "stats": {
     "totalCatches": 8,
     "sources": 5,
-    "lastCollected": "2026-11-12 10:31"
+    "lastCollected": "2026-11-12 17:28"
   }
 }
